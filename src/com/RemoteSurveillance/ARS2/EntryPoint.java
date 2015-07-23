@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
@@ -15,7 +14,7 @@ public class EntryPoint extends Activity {
 	
 	
 	//int clr= 5026082 ;
-	Handler mHandler;
+	//Handler mHandler;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -33,14 +32,14 @@ public class EntryPoint extends Activity {
 					// TODO Auto-generated method stub
 				//	super.run();
 					try {
-						sleep(4*1000);	
+						sleep(3*1000);	
 					} catch (InterruptedException e) {
 						// TODO: handle exception
 						e.printStackTrace();
 					}finally{
 					Intent loaded = new Intent(getApplicationContext(), MainActivity.class);
 					startActivity(loaded);
-					finish();
+					//finish();
 					}
 					}
 					

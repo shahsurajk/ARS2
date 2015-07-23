@@ -47,6 +47,8 @@
             android:screenOrientation="landscape"></activity>
         <activity android:name=".Info"
             android:screenOrientation="landscape"></activity>
+        <activity  android:name=".Help"
+            android:screenOrientation="landscape"></activity>
         
         </application>
 

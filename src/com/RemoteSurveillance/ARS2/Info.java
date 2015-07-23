@@ -24,7 +24,8 @@ public class Info extends Activity {
     	
     	info= (TextView) findViewById(R.id.infotxt);
     	
-    	info.setText("Application Developed by: Shekhar, Suraj, Nishad, Shailesh.\n\nGUI Desgined by:\tShekhar Zunzarrao & Suraj Shah.\n\nCore Written by:\tSuraj Shah.\n\nReal World Testers:\tNishad Sawant & Shailesh Saindane.\n\n\nTHANK YOU!");
+    	info.setText("Design & Programming:: Suraj Shah\nshah.suraj.k@gmail.com\n\nMedia Player Handling:: Nishad Sawant\n\t\tnishadron@gmail.com"
+    			+ "\n\nNetworking:: Shailesh Saindane\nssaindane77@gmail.com\n\nResources:: Shekhar Zunzarrao\nshekhar.zunzarrao@gmail.com\n\nTHANK YOU!");
 
 	}
 

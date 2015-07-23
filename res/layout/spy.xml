@@ -13,23 +13,25 @@
         android:layout_centerVertical="true" />
 
     <TextView
-        android:id="@+id/spytxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:text="TextView"
-        android:textColor="#FF0000" />
-
-    <TextView
         android:id="@+id/msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/spytxt"
         android:layout_alignBottom="@+id/spytxt"
-        android:layout_marginLeft="159dp"
-        android:layout_toRightOf="@+id/spytxt"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
         android:text="TextView"
         android:textColor="#00FF00" />
+
+    <TextView
+        android:id="@+id/spytxt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#FF0000" />
 
 </RelativeLayout>

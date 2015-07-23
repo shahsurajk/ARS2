@@ -29,10 +29,10 @@ public class Login extends Activity {
 		setContentView(R.layout.login);
 		
 		ip= (EditText) findViewById(R.id.iptxt);
-		ip.setText("Set Server IP here!");
+		ip.setText("192.168.43.1");
 	
 		pass= (EditText) findViewById(R.id.passtxt);
-		pass.setText("Password");
+		pass.setText("123");
 		connect= (ImageButton) findViewById(R.id.authbtn);
 	connect.setOnClickListener(new OnClickListener() {
 		

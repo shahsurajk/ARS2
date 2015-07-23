@@ -8,91 +8,110 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    
-    
-<ImageView
+    <ImageView
         android:id="@+id/imgView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
-    <RelativeLayout 
-     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
-    <ImageButton
-        android:id="@+id/stop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/left"
-        android:background="#00000000"
-        android:scaleType="fitCenter"
-        android:src="@drawable/stop" />
-
-    <ImageButton
-        android:id="@+id/down"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/rot"
-        android:layout_alignParentBottom="true"
-        android:background="#00000000"
-        android:src="@drawable/arrowdown" />
-
-    <ImageButton
-        android:id="@+id/rot"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="34dp"
-        android:layout_marginRight="32dp"
-        android:background="#00000000"
-        android:scaleType="fitCenter"
-        android:src="@drawable/all" />
+        android:layout_centerVertical="true" 
+        android:scaleType="fitXY"/>
 
-    <ImageButton
-        android:id="@+id/right"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/rot"
-        android:background="#00000000"
-        android:src="@drawable/arrowright" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <ImageButton
-        android:id="@+id/left"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/rot"
-        android:layout_marginRight="16dp"
-        android:layout_toLeftOf="@+id/right"
-        android:background="#00000000"
-        android:src="@drawable/arrowleft" />
+        <ImageButton
+            android:id="@+id/stop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/down"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/stop" />
 
-    <ImageButton
-        android:id="@+id/up"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/down"
-        android:layout_alignLeft="@+id/rot"
-        android:layout_marginBottom="20dp"
-        android:background="#00000000"
-        android:src="@drawable/arrowup" />
+        <ImageButton
+            android:id="@+id/down"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/rot"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            android:src="@drawable/arrowdown" />
 
-    <TextView
-        android:id="@+id/errors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="21dp"
-        android:layout_toRightOf="@+id/left"
-        android:text="TextView"
-        android:textColor="#FF0000"
-        android:textColorHint="#FF0000"
-        android:textSize="12sp" />
-    
-</RelativeLayout>
-    
+        <TextView
+            android:id="@+id/errors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/up"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="21dp"
+            android:text="TextView"
+            android:textColor="#FF0000"
+            android:textColorHint="#FF0000"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/left"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/down"
+            android:layout_toLeftOf="@+id/down"
+            android:background="#00000000"
+            android:src="@drawable/arrowleft" />
+
+        <ImageButton
+            android:id="@+id/right"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/left"
+            android:background="#00000000"
+            android:src="@drawable/arrowright" />
+
+        <ImageButton
+            android:id="@+id/up"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/left"
+            android:layout_alignLeft="@+id/rot"
+            android:background="#00000000"
+            android:src="@drawable/arrowup" />
+
+        <ImageButton
+            android:id="@+id/rot"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/up"
+            android:layout_toLeftOf="@+id/right"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/all" />
+
+        <TextView
+            android:id="@+id/read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="TextView"
+            android:textColor="#0000FF"
+            android:textColorHint="#0000FF" />
+
+        <TextView
+            android:id="@+id/warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/errors"
+            android:layout_marginTop="38dp"
+            android:text="TextView"
+            android:textColor="#FFAA2A"
+            android:textColorHint="#FFAA2A"
+            android:textColorLink="#FFAA2A" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

@@ -55,7 +55,7 @@
         android:src="@drawable/padlock" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/helpcontent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/authbtn"

@@ -1,0 +1,209 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\.name
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\encodings.xml
+* .idea\gradle.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\scopes\
+* .idea\scopes\scope_settings.xml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* .metadata\
+* .metadata\.lock
+* .metadata\.log
+* .metadata\.plugins\
+* .metadata\.plugins\org.eclipse.cdt.core\
+* .metadata\.plugins\org.eclipse.cdt.core\.log
+* .metadata\.plugins\org.eclipse.cdt.make.core\
+* .metadata\.plugins\org.eclipse.cdt.make.core\specs.c
+* .metadata\.plugins\org.eclipse.cdt.make.core\specs.cpp
+* .metadata\.plugins\org.eclipse.core.resources\
+* .metadata\.plugins\org.eclipse.core.resources\.root\
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\history.version
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\properties.index
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\properties.version
+* .metadata\.plugins\org.eclipse.core.resources\.root\1.tree
+* .metadata\.plugins\org.eclipse.core.resources\.safetable\
+* .metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resources
+* .metadata\.plugins\org.eclipse.core.runtime\
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\com.android.ide.eclipse.adt.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.cdt.ui.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.core.resources.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jdt.ui.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.ide.prefs
+* .metadata\.plugins\org.eclipse.e4.workbench\
+* .metadata\.plugins\org.eclipse.e4.workbench\workbench.xmi
+* .metadata\.plugins\org.eclipse.jdt.core\
+* .metadata\.plugins\org.eclipse.jdt.core\invalidArchivesCache
+* .metadata\.plugins\org.eclipse.jdt.core\nonChainingJarsCache
+* .metadata\.plugins\org.eclipse.jdt.core\variablesAndContainers.dat
+* .metadata\.plugins\org.eclipse.jdt.ui\
+* .metadata\.plugins\org.eclipse.jdt.ui\OpenTypeHistory.xml
+* .metadata\.plugins\org.eclipse.jdt.ui\QualifiedTypeNameHistory.xml
+* .metadata\.plugins\org.eclipse.jdt.ui\dialog_settings.xml
+* .metadata\.plugins\org.eclipse.ui.workbench\
+* .metadata\.plugins\org.eclipse.ui.workbench\dialog_settings.xml
+* .metadata\.plugins\org.eclipse.ui.workbench\workingsets.xml
+* .metadata\version.ini
+* app\
+* app\build.gradle
+* app\src\
+* app\src\main\
+* app\src\main\AndroidManifest.xml
+* app\src\main\java\
+* app\src\main\java\com\
+* app\src\main\java\com\RemoteSurveillance\
+* app\src\main\java\com\RemoteSurveillance\ARS2\
+* app\src\main\java\com\RemoteSurveillance\ARS2\ControllerConnection.java
+* app\src\main\java\com\RemoteSurveillance\ARS2\EntryPoint.java
+* app\src\main\java\com\RemoteSurveillance\ARS2\Help.java
+* app\src\main\java\com\RemoteSurveillance\ARS2\Info.java
+* app\src\main\java\com\RemoteSurveillance\ARS2\Login.java
+* app\src\main\java\com\RemoteSurveillance\ARS2\MainActivity.java
+* app\src\main\java\com\RemoteSurveillance\ARS2\SpyConnection.java
+* app\src\main\res\
+* app\src\main\res\drawable-hdpi\
+* app\src\main\res\drawable-hdpi\all.png
+* app\src\main\res\drawable-hdpi\all2.png
+* app\src\main\res\drawable-hdpi\arrowdown.png
+* app\src\main\res\drawable-hdpi\arrowleft.png
+* app\src\main\res\drawable-hdpi\arrowright.png
+* app\src\main\res\drawable-hdpi\arrowup.png
+* app\src\main\res\drawable-hdpi\ars2_background.png
+* app\src\main\res\drawable-hdpi\bkg.png
+* app\src\main\res\drawable-hdpi\brochure3.png
+* app\src\main\res\drawable-hdpi\camera.png
+* app\src\main\res\drawable-hdpi\control.png
+* app\src\main\res\drawable-hdpi\flash.png
+* app\src\main\res\drawable-hdpi\ic_launcher.png
+* app\src\main\res\drawable-hdpi\info.png
+* app\src\main\res\drawable-hdpi\informationideogram.png
+* app\src\main\res\drawable-hdpi\padlock.png
+* app\src\main\res\drawable-hdpi\questionideogram.png
+* app\src\main\res\drawable-hdpi\settings.png
+* app\src\main\res\drawable-hdpi\speedometer.png
+* app\src\main\res\drawable-hdpi\spy.png
+* app\src\main\res\drawable-hdpi\steer.png
+* app\src\main\res\drawable-hdpi\stop.png
+* app\src\main\res\drawable-ldpi\
+* app\src\main\res\drawable-ldpi\left.png
+* app\src\main\res\drawable-mdpi\
+* app\src\main\res\drawable-mdpi\ic_launcher.png
+* app\src\main\res\drawable-xhdpi\
+* app\src\main\res\drawable-xhdpi\ic_launcher.png
+* app\src\main\res\drawable-xxhdpi\
+* app\src\main\res\drawable-xxhdpi\ic_launcher.png
+* app\src\main\res\layout\
+* app\src\main\res\layout\activity_main.xml
+* app\src\main\res\layout\decide.xml
+* app\src\main\res\layout\entry.xml
+* app\src\main\res\layout\help.xml
+* app\src\main\res\layout\info.xml
+* app\src\main\res\layout\login.xml
+* app\src\main\res\layout\spy.xml
+* app\src\main\res\menu\
+* app\src\main\res\menu\main.xml
+* app\src\main\res\raw\
+* app\src\main\res\raw\dtmf_0.wav
+* app\src\main\res\raw\dtmf_1.wav
+* app\src\main\res\raw\dtmf_2.wav
+* app\src\main\res\raw\dtmf_3.wav
+* app\src\main\res\raw\dtmf_4.wav
+* app\src\main\res\raw\dtmf_5.wav
+* app\src\main\res\raw\dtmf_6.wav
+* app\src\main\res\raw\dtmf_7.wav
+* app\src\main\res\raw\dtmf_8.wav
+* app\src\main\res\raw\dtmf_9.wav
+* app\src\main\res\raw\dtmf_pound.wav
+* app\src\main\res\raw\dtmf_star.wav
+* app\src\main\res\values-sw600dp\
+* app\src\main\res\values-sw600dp\dimens.xml
+* app\src\main\res\values-sw720dp-land\
+* app\src\main\res\values-sw720dp-land\dimens.xml
+* app\src\main\res\values-v11\
+* app\src\main\res\values-v11\styles.xml
+* app\src\main\res\values-v14\
+* app\src\main\res\values-v14\styles.xml
+* app\src\main\res\values\
+* app\src\main\res\values\dimens.xml
+* app\src\main\res\values\strings.xml
+* app\src\main\res\values\styles.xml
+* bckup\
+* bckup\Controller.java
+* bckup\ControllerConnection.java
+* bckup\EntryPoint.java
+* bckup\MainActivity.java
+* bckup\Spy.java
+* bckup\SpyConnection.java
+* bckup\Try 3\
+* bckup\Try 3\ARS2.apk
+* bckup\Try 3\SpyConnection.java
+* bckup\activity_main.xml
+* bckup\decide.xml
+* bckup\entry.xml
+* bckup\final try\
+* bckup\final try\ControllerConnection.java
+* bckup\spy.xml
+* bckup\try 2\
+* bckup\try 2\ControllerConnection.java
+* bckup\try 2\SpyConnection.java
+* build.gradle
+* gradle\
+* gradle\wrapper\
+* gradle\wrapper\gradle-wrapper.jar
+* gradle\wrapper\gradle-wrapper.properties
+* gradlew
+* gradlew.bat
+* ic_launcher-web.png
+* settings.gradle
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:21.0.3
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
