@@ -4,5 +4,6 @@ ARS2 take remote surveillace system to the next level by making it mobile, also 
 It requires only a single users, also the App can be used by a naive (non-techincal) person. 
 Also, the hardware is real cheap(as it doesn't require hardware cameras and other compoents, they're provided by android devices itself. )
 Anyone hopping to contribute more please do mail me your username, i'll add you as a collaborator. 
+Also download the file "Remote Surveillance System.ppsx" to get a better understanding of the project.
 
 Thank you very much for reading. 
