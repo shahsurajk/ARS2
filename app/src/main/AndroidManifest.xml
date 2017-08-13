@@ -22,7 +22,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.RemoteSurveillance.ARS2.EntryPoint"
+            android:name="com.RemoteSurveillance.ARS2.ui.Activity_SplashScreen"
             android:label="@string/app_name"
             android:screenOrientation="landscape" >
             
@@ -41,9 +41,9 @@
             android:screenOrientation="landscape" />
         <activity android:name=".ControllerConnection"
             android:screenOrientation="landscape"></activity>
-        <activity android:name=".SpyConnection"
+        <activity android:name=".ui.Activity_SpyConnection"
             android:screenOrientation="landscape"></activity>
-        <activity android:name=".Login"
+        <activity android:name=".ui.Activity_Login"
             android:screenOrientation="landscape"></activity>
         <activity android:name=".Info"
             android:screenOrientation="landscape"></activity>

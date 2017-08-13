@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/ars2_background"
     android:clickable="false"
-    tools:context=".EntryPoint" >
+    tools:context=".ui.Activity_SplashScreen" >
 
     <ProgressBar
         android:id="@+id/progressBar1"

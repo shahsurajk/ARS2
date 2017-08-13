@@ -2,25 +2,76 @@
 <items version="2" >
 
     <item
-        jar="D:\specialworkspace\ARS2\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="D:\specialworkspace\ARS2\app\build\intermediates\pre-dexed\debug\classes-91badd3576c02f9162f0e0c379bc5ce9302e1f04.jar" />
+        is-multidex="true"
+        jar="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0e1e80839abdbec5185a172b19478d678a3608b3/classes.dex" />
     </item>
     <item
-        jar="C:\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        is-multidex="false"
+        jar="/home/madscientist/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
+        optimize="true"
+        revision="25.0.0"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="D:\specialworkspace\ARS2\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-cde0fe43c1d155a84c58787d13ed53f1de001e61.jar" />
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3_7e7e50f8b43455cec485cf62703523b07f41edec.jar" />
     </item>
     <item
-        jar="D:\specialworkspace\ARS2\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        is-multidex="false"
+        jar="/home/madscientist/.android/build-cache/7c0662ba7f4ef0231fbe26616e833272f18ccede/output/jars/libs/internal_impl-21.0.3.jar"
         jumboMode="false"
-        revision="23.0.0 rc3"
+        optimize="true"
+        revision="25.0.0"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="D:\specialworkspace\ARS2\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-8f78d242dc9b9e28acdd7f65efa8edc209cd0601.jar" />
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3_6ce77b0de73ecc186af174a322f4a4589ac486e2.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bd6f56a094c6d24fa718962ab144e0f60da26830">
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_cdb6388ea771d06c8401e6ee92399dbede723b48/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/madscientist/.android/build-cache/7c0662ba7f4ef0231fbe26616e833272f18ccede/output/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-21.0.3_6ce77b0de73ecc186af174a322f4a4589ac486e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/madscientist/.android/build-cache/7c0662ba7f4ef0231fbe26616e833272f18ccede/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/pre-dexed/debug/classes_58412f04e71ab25660052d14e093712c4d6ad12b.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/madscientist/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-21.0.3_7e7e50f8b43455cec485cf62703523b07f41edec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/madscientist/.android/build-cache/7c0662ba7f4ef0231fbe26616e833272f18ccede/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/madscientist/StudioProjects/ARS2/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_58412f04e71ab25660052d14e093712c4d6ad12b/classes.dex" />
     </item>
 
 </items>

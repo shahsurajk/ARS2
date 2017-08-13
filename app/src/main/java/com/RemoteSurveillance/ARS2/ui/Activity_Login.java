@@ -1,4 +1,4 @@
-package com.RemoteSurveillance.ARS2;
+package com.RemoteSurveillance.ARS2.ui;
 
 
 import android.app.Activity;
@@ -13,7 +13,10 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 
-public class Login extends Activity {
+import com.RemoteSurveillance.ARS2.ControllerConnection;
+import com.RemoteSurveillance.ARS2.R;
+
+public class Activity_Login extends Activity {
 
 	ImageButton connect; 
 	EditText ip, pass; 
@@ -29,7 +32,7 @@ public class Login extends Activity {
 		setContentView(R.layout.login);
 		
 		ip= (EditText) findViewById(R.id.iptxt);
-		ip.setText("192.168.43.1");
+		ip.setText("192.168.0.1");
 	
 		pass= (EditText) findViewById(R.id.passtxt);
 		pass.setText("123");
@@ -43,13 +46,13 @@ public class Login extends Activity {
 			password= pass.getText().toString();
 			if(password.equals("123"))
 			{
-				Intent go= new Intent(Login.this, ControllerConnection.class);
+				Intent go= new Intent(Activity_Login.this, ControllerConnection.class);
 				go.putExtra("IP", serverip);
 				startActivity(go);
 				
 			}else
 			{
-				Toast.makeText(Login.this, "Wrong Password! Try Again.", Toast.LENGTH_SHORT).show();
+				Toast.makeText(Activity_Login.this, "Wrong Password! Try Again.", Toast.LENGTH_SHORT).show();
 			}
 		}
 	});

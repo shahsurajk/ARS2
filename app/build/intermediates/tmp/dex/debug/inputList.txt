@@ -1,4 +1,0 @@
-D:\specialworkspace\ARS2\app\build\intermediates\classes\debug
-D:\specialworkspace\ARS2\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-cde0fe43c1d155a84c58787d13ed53f1de001e61.jar
-D:\specialworkspace\ARS2\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-8f78d242dc9b9e28acdd7f65efa8edc209cd0601.jar
-D:\specialworkspace\ARS2\app\build\intermediates\pre-dexed\debug\classes-91badd3576c02f9162f0e0c379bc5ce9302e1f04.jar
