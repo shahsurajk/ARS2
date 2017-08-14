@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.view.View.OnClickListener;
 
+import com.RemoteSurveillance.ARS2.ui.Activity_ControllerConnection;
 import com.RemoteSurveillance.ARS2.ui.Activity_Login;
 import com.RemoteSurveillance.ARS2.ui.Activity_SpyConnection;
 
@@ -47,8 +48,6 @@ public class MainActivity extends Activity {
         });
 
         controlButton.setOnClickListener(new OnClickListener() {
-
-
             public void onClick(View v) {
                 Intent load1 = new Intent(getApplicationContext(), Activity_Login.class);
                 startActivity(load1);

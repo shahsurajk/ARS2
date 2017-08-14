@@ -1,30 +1,26 @@
 package com.RemoteSurveillance.ARS2.ui;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
-import java.util.Enumeration;
+import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.Bitmap.Config;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.Size;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -33,270 +29,242 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.RemoteSurveillance.ARS2.R;
+import com.RemoteSurveillance.ARS2.util.Utils;
 
-public class Activity_SpyConnection extends Activity implements SurfaceHolder.Callback , PreviewCallback {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import io.reactivex.BackpressureStrategy;
+import io.reactivex.Flowable;
+import io.reactivex.FlowableEmitter;
+import io.reactivex.FlowableOnSubscribe;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
-	private MediaPlayer mPlayer;
-	private ServerSocket serverSoc;
-	private Socket clientSoc;
-	private static final int PORT= 45678;
-	TextView info, msg;
-	String messageFromClient, status="WORKING";
+public class Activity_SpyConnection extends Activity implements SurfaceHolder.Callback {
 
-	DataInputStream dataInputStream;
-	DataOutputStream dataOutputStream;
-	SurfaceView mSurfView;
-	SurfaceHolder mHolder;
-	Bitmap mBitmap;
-	Handler mHandler;
-	int[] pixels;
-	Size previewSize;
-	Camera mCamera;
-	Parameters params;
-	String temp;
-	Boolean flagStatus;
+    private static final String TAG = Activity_SpyConnection.class.getCanonicalName().toString();
+    private MediaPlayer mPlayer;
+    private ServerSocket serverSoc;
+    private Socket clientSoc;
+    private static final int PORT = 45678;
+    @BindView(R.id.spytxt)TextView infoTV;
+    @BindView(R.id.msg)TextView msgTV;
+    @BindView(R.id.surface)SurfaceView surfaceView;
+    private String messageFromClient;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    private DataInputStream dataInputStream;
+    private DataOutputStream dataOutputStream;
+    private SurfaceHolder mHolder;
+    private Bitmap mBitmap;
+    private int[] pixels;
+    private Size previewSize;
+    private Camera mCamera;
+    private Parameters params;
 
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		setContentView(R.layout.spy);
+        setContentView(R.layout.activity_spy);
+        ButterKnife.bind(this);
 
-		info= (TextView) findViewById(R.id.spytxt);
-		msg=(TextView) findViewById(R.id.msg);
-		info.setText("");
-		msg.setText("");
-		mSurfView= (SurfaceView) findViewById(R.id.surface);
+        infoTV.setText("");
+        msgTV.setText("");
 
-		mHolder= mSurfView.getHolder();
-		mHolder.addCallback(this);
+        mHolder = surfaceView.getHolder();
+        mHolder.addCallback(this);
 
-		//display IP to connect to..
-		info.setText("Hey! I'm waiting here; at IP:: " + getIpAddress()+"And Port:: "+ PORT);
-		temp= "empty";
-		new Thread(new Runnable() {
+        //display IP to connect to..
+        infoTV.setText("Hey! I'm waiting here; at IP:: "+Utils.getIpAddress("")+ "And Port:: " + PORT);
 
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				try {
-					serverSoc= new ServerSocket(PORT);
+        try {
+            serverSoc = new ServerSocket(PORT);
 
-					while(true ){
-						clientSoc=serverSoc.accept();
-						dataInputStream= new DataInputStream(clientSoc.getInputStream());
-						messageFromClient= dataInputStream.readUTF();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-						dataOutputStream= new DataOutputStream(clientSoc.getOutputStream());
-						dataOutputStream.writeUTF("Message Sent to Client is:: "+messageFromClient);
-						//	dataOutputStream.writeInt(250);
+        mCamera = Camera.open();
 
-						Activity_SpyConnection.this.runOnUiThread(new Runnable() {
+        Flowable f1 = Flowable.create(new FlowableOnSubscribe() {
+            @Override
+            public void subscribe(@NonNull FlowableEmitter e) throws Exception {
+                if (clientSoc== null)
+                    clientSoc = serverSoc.accept();
+                dataInputStream = new DataInputStream(clientSoc.getInputStream());
+                dataOutputStream = new DataOutputStream(clientSoc.getOutputStream());
+                while (clientSoc.isConnected()){
+                    e.onNext(dataInputStream.readUTF());
+                }
+            }
+        }, BackpressureStrategy.BUFFER).onErrorReturnItem("STOP");
 
-							@Override
-							public void run() {
-								// TODO Auto-generated method stub
+        f1.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer() {
+                    @Override
+                    public void accept(Object o) throws Exception {
+                        Log.d(TAG, "accept: "+o);
+                        messageFromClient = (String) o;
+//                        playDTMFTones();
+                    }
+                });
+        Flowable f2 = Flowable.create(new FlowableOnSubscribe() {
+            @Override
+            public void subscribe(@NonNull FlowableEmitter e) throws Exception {
+                mCamera.setPreviewCallback(new PreviewCallback() {
+                    @Override
+                    public void onPreviewFrame(byte[] data, Camera camera) {
+                        try {
+                            if (dataOutputStream!=null){
+                                dataOutputStream.writeInt(data.length);
+                                dataOutputStream.write(data);
+                            }
+                        } catch (IOException e1) {
+                            e1.printStackTrace();
+                        }
+                    }
+                });
+            }
+        }, BackpressureStrategy.BUFFER).doOnError(new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) throws Exception {
+                messageFromClient = "STOP";
+                playDTMFTones();
+            }
+        });
+        f2.subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .debounce(5000, TimeUnit.MILLISECONDS)
+                .subscribe();
+    }
+    private void playDTMFTones(){
+        if (messageFromClient.equalsIgnoreCase("UP")) {
+            mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_9);
+            mPlayer.start();
+        } else if (messageFromClient.equalsIgnoreCase("DOWN")) {
+            mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_6);
+            mPlayer.start();
+        } else if (messageFromClient.equalsIgnoreCase("RIGHT")) {
+            mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_1);
+            mPlayer.start();
+        } else if (messageFromClient.equalsIgnoreCase("LEFT")) {
+            mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_8);
+            mPlayer.start();
+        } else if (messageFromClient.equalsIgnoreCase("ROT")) {
+            mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_5);
+            mPlayer.start();
+        } else if (messageFromClient.equalsIgnoreCase("STOP")) {
+            mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_3);
+            mPlayer.start();
+        }
+    }
 
-								msg.setText("The Messge Recieved is:: "+messageFromClient);
-								//messageFromClient="The Message sent is:: ";
-							}
-						});
-						flagStatus= temp.equalsIgnoreCase(messageFromClient);
-						temp=""+messageFromClient;
-						if(!(flagStatus))
-						{
-							if(messageFromClient.equalsIgnoreCase("UP")){
-								mPlayer= MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_9);
-								mPlayer.start();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        dataInputStream = null;
+        dataOutputStream = null;
+        mCamera.release();
+    }
 
-							}
-							else if (messageFromClient.equalsIgnoreCase("DOWN")){
-								mPlayer= MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_6);
-								mPlayer.start();
-							}
-							else if (messageFromClient.equalsIgnoreCase("RIGHT")){
-								mPlayer= MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_1);
-								mPlayer.start();
-							}else if (messageFromClient.equalsIgnoreCase("LEFT")){
-								mPlayer= MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_8);
-								mPlayer.start();
-							}else if (messageFromClient.equalsIgnoreCase("ROT")){
-								mPlayer= MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_5);
-								mPlayer.start();
-							}
-							else if (messageFromClient.equalsIgnoreCase("STOP")) {
-								mPlayer= MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_3);
-								mPlayer.start();
+    @Override
+    public void surfaceCreated(SurfaceHolder holder) {
+        params = mCamera.getParameters();
+        previewSize = params.getPreviewSize();
+        mCamera.getParameters().setPreviewFormat(ImageFormat.RGB_565);
+        pixels = new int[previewSize.width * previewSize.height];
 
-							}
-							flagStatus= true;
-						}	}// while ends here
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+        try {
+            mCamera.setPreviewDisplay(holder);
+            mCamera.startPreview();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mCamera.release();
+        }
+        mCamera.startPreview();
+    }
 
-			}
-		}).start();;
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width,
+                               int height) {
+    }
 
-	}
-	private String getIpAddress() {
-		String ip = "";
-		try {
-			Enumeration<NetworkInterface> enumNetworkInterfaces = NetworkInterface
-					.getNetworkInterfaces();
-			while (enumNetworkInterfaces.hasMoreElements()) {
-				NetworkInterface networkInterface = enumNetworkInterfaces
-						.nextElement();
-				Enumeration<InetAddress> enumInetAddress = networkInterface
-						.getInetAddresses();
-				while (enumInetAddress.hasMoreElements()) {
-					InetAddress inetAddress = enumInetAddress.nextElement();
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+        mCamera.stopPreview();
+        mCamera.release();
+    }
 
-					if (inetAddress.isSiteLocalAddress()) {
-						ip += "SiteLocalAddress: "
-								+ inetAddress.getHostAddress() + "\n";
-					}
+    private byte[] streamMJPEG = new byte[0];
 
-				}
+    public void decodeYUV420(int[] rgb, byte[] yuv420, int width, int height) {
+        final int frameSize = width * height;
 
-			}
+        for (int j = 0, yp = 0; j < height; j++) {
+            int uvp = frameSize + (j >> 1) * width, u = 0, v = 0;
+            for (int i = 0; i < width; i++, yp++) {
+                int y = (0xff & ((int) yuv420[yp])) - 16;
+                if (y < 0) y = 0;
+                if ((i & 1) == 0) {
+                    v = (0xff & yuv420[uvp++]) - 128;
+                    u = (0xff & yuv420[uvp++]) - 128;
+                }
 
-		} catch (SocketException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			ip += "Something Wrong! " + e.toString() + "\n";
-		}
+                int y1192 = 1192 * y;
+                int r = (y1192 + 1634 * v);
+                int g = (y1192 - 833 * v - 400 * u);
+                int b = (y1192 + 2066 * u);
 
-		return ip;
-	}
-	@Override
-	protected void onDestroy() {
-		// TODO Auto-generated method stub
-		super.onDestroy();
-		try {
-			serverSoc.close();
-			serverSoc= null;
-			dataInputStream =null;
-			dataOutputStream= null;
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		status=null;
-	}	@Override
-	public void surfaceCreated(SurfaceHolder holder) {
-		// TODO fix crash here, unable to open camera
-		mCamera =Camera.open();
-		params= mCamera.getParameters();
-		previewSize= params.getPreviewSize();
-		pixels= new int[previewSize.width* previewSize.height];
+                if (r < 0) r = 0;
+                else if (r > 262143) r = 262143;
+                if (g < 0) g = 0;
+                else if (g > 262143) g = 262143;
+                if (b < 0) b = 0;
+                else if (b > 262143) b = 262143;
 
+                rgb[yp] = 0xff000000 | ((r << 6) & 0xff0000) | ((g >> 2) & 0xff00) | ((b >> 10) & 0xff);
+            }
+        }
+    }
+/*
 
-		try {
-			mCamera.setPreviewCallback(this);
-			mCamera.setPreviewDisplay(holder);
-			mCamera.startPreview();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			mCamera.release();
-			mCamera =null;
+    @Override
+    public void onPreviewFrame(final byte[] data, Camera camera) {
+        ;
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        decodeYUV420(pixels, data, previewSize.width, previewSize.height);
+        mBitmap = Bitmap.createBitmap(pixels, previewSize.width, previewSize.height, Config.ARGB_8888);
+        mBitmap.compress(CompressFormat.JPEG, 20, out);
+        streamMJPEG = out.toByteArray();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    if (dataOutputStream!=null){
+                        dataOutputStream.writeInt(streamMJPEG.length);
+                        dataOutputStream.write(streamMJPEG);
+                    }
+                } catch (OutOfMemoryError e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (NegativeArraySizeException e) {
+                    Log.d("Spy Conn", "Negative Size?" + e);
+                } catch (ArrayStoreException e) {
+                    e.printStackTrace();
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
+                }
+            }
 
-		}
-
-	}
-
-	@Override
-	public void surfaceChanged(SurfaceHolder holder, int format, int width,
-							   int height) {
-		// TODO Auto-generated method stub
-		mCamera.startPreview();
-	}
-
-	@Override
-	public void surfaceDestroyed(SurfaceHolder holder) {
-		// TODO Auto-generated method stub
-		mCamera.stopPreview();
-		//	mCamera.release();
-		mCamera= null;
-
-	}
-	byte[] streamMJPEG;
-
-	@Override
-	public void onPreviewFrame(byte[] data, Camera camera) {
-		// TODO Auto-generated method stub
-		ByteArrayOutputStream out= new ByteArrayOutputStream();
-		decodeYUV420(pixels, data, previewSize.width, previewSize.height);
-		mBitmap = Bitmap.createBitmap(pixels, previewSize.width, previewSize.height,Config.ARGB_8888);
-		mBitmap.compress(CompressFormat.JPEG	, 25, out);
-
-		streamMJPEG= out.toByteArray();
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-
-				try {
-					dataOutputStream.writeInt(streamMJPEG.length);
-					dataOutputStream.write(streamMJPEG);
-				}catch(NullPointerException e)
-				{
-					Log.d("Spy Conn", "Catch d error::" +e);
-				}catch (OutOfMemoryError e) {
-					// TODO: handle exception
-					e.printStackTrace();
-				}
-				catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				catch (NegativeArraySizeException e){
-					Log.d("Spy Conn","Negative Size?" +e);
-				}
-				catch(ArrayStoreException e)
-				{
-					e.printStackTrace();
-				}
-				catch(ArrayIndexOutOfBoundsException e)
-				{
-					e.printStackTrace();
-				}
-			}
-
-		}).start();
-	}
-	public void decodeYUV420(int[] rgb, byte[] yuv420, int width, int height) {
-		final int frameSize = width * height;
-
-		for (int j = 0, yp = 0; j < height; j++) {
-			int uvp = frameSize + (j >> 1) * width, u = 0, v = 0;
-			for (int i = 0; i < width; i++, yp++) {
-				int y = (0xff & ((int) yuv420[yp])) - 16;
-				if (y < 0) y = 0;
-				if ((i & 1) == 0) {
-					v = (0xff & yuv420[uvp++]) - 128;
-					u = (0xff & yuv420[uvp++]) - 128;
-				}
-
-				int y1192 = 1192 * y;
-				int r = (y1192 + 1634 * v);
-				int g = (y1192 - 833 * v - 400 * u);
-				int b = (y1192 + 2066 * u);
-
-				if (r < 0) r = 0; else if (r > 262143) r = 262143;
-				if (g < 0) g = 0; else if (g > 262143) g = 262143;
-				if (b < 0) b = 0; else if (b > 262143) b = 262143;
-
-				rgb[yp] = 0xff000000 | ((r << 6) & 0xff0000) | ((g >> 2) & 0xff00) | ((b >> 10) & 0xff);
-			}
-		}
-	}
+        }).start();
+    }
+*/
 
 }

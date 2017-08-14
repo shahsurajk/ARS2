@@ -46,7 +46,7 @@
             android:name="com.RemoteSurveillance.ARS2.Controller"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.RemoteSurveillance.ARS2.ControllerConnection"
+            android:name="com.RemoteSurveillance.ARS2.ui.Activity_ControllerConnection"
             android:screenOrientation="landscape" />
         <activity
             android:name="com.RemoteSurveillance.ARS2.ui.Activity_SpyConnection"

@@ -39,7 +39,7 @@
             android:screenOrientation="landscape" />
         <activity android:name=".Controller"
             android:screenOrientation="landscape" />
-        <activity android:name=".ControllerConnection"
+        <activity android:name=".ui.Activity_ControllerConnection"
             android:screenOrientation="landscape"></activity>
         <activity android:name=".ui.Activity_SpyConnection"
             android:screenOrientation="landscape"></activity>

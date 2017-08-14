@@ -20,6 +20,7 @@ ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.x
 uses-sdk
 ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:7:5-9:68
 MERGED from [com.jakewharton:butterknife:8.7.0] /home/madscientist/.android/build-cache/39bb94baa34fbfeb645dd8536afce443bea8e15e/output/AndroidManifest.xml:5:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/madscientist/.android/build-cache/162831e9fc8f43e6e6fcb3b3463c8921a945a4dc/output/AndroidManifest.xml:19:5-43
 MERGED from [com.android.support:support-v4:25.3.0] /home/madscientist/.android/build-cache/4bb90cf388cc4450710b7d57d51a55da7a50b38d/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.0] /home/madscientist/.android/build-cache/5dd00d547afa0cbffc3aff2baa858c89c55543ab/output/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.0] /home/madscientist/.android/build-cache/a7523c725823e5c0d163ebf4c2491552a43388d1/output/AndroidManifest.xml:21:5-23:63
@@ -120,12 +121,12 @@ ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.x
 		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:41:13-50
 	android:name
 		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:40:19-45
-activity#com.RemoteSurveillance.ARS2.ControllerConnection
+activity#com.RemoteSurveillance.ARS2.ui.Activity_ControllerConnection
 ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:9-43:62
 	android:screenOrientation
 		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:43:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:19-55
+		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:19-67
 activity#com.RemoteSurveillance.ARS2.ui.Activity_SpyConnection
 ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:44:9-45:62
 	android:screenOrientation
