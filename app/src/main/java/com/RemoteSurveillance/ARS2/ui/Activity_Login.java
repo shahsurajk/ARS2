@@ -34,7 +34,7 @@ public class Activity_Login extends Activity {
 
         ip= (EditText) findViewById(R.id.iptxt);
 //        todo reset prefixed value
-        ip.setText("192.168.0.101");
+        ip.setText("192.168.0.107");
 
         pass= (EditText) findViewById(R.id.passtxt);
         pass.setText("123");

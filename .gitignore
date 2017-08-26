@@ -4,6 +4,7 @@ app/build/
 .idea/
 .gradle/
 build/
+app/app.iml
 app/build/generated/assets/
 app/build/generated/res/
 app/build/generated/source/aidl/

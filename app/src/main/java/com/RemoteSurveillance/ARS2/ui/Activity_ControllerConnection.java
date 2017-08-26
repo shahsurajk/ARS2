@@ -103,18 +103,18 @@ public class Activity_ControllerConnection extends Activity {
                     dataOutputStream = new DataOutputStream(clientSocket.getOutputStream());
                     dataInputStream = new DataInputStream(clientSocket.getInputStream());
                     while (dataInputStream!=null){
-//                        msg = dataInputStream.readUTF();
+                        msg = dataInputStream.readUTF();
                         streamSize = dataInputStream.readInt();
                         Log.d(TAG, "run: "+streamSize);
-//                        stream = new byte[streamSize];
-                        if (streamSize>=0){
-//                            dataInputStream.readFully(stream,0,streamSize);
-//                            streamBitmap = BitmapFactory.decodeByteArray(stream, 0, streamSize);
+                       if (streamSize>=0 && streamSize<Runtime.getRuntime().maxMemory()){
+                           stream = new byte[streamSize];
+                           dataInputStream.readFully(stream);
+                            streamBitmap = BitmapFactory.decodeByteArray(stream, 0, streamSize);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     warn.setText("" + exceptError);
-                                    errs.setText("" + msg);
+                                    errs.setText("errs" + msg);
                                     read.setText("Frame Size:: " + streamSize);
                                     mView.setImageBitmap(streamBitmap);
                                 }
@@ -126,6 +126,17 @@ public class Activity_ControllerConnection extends Activity {
                 }
             }
         }).start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        try {
+            clientSocket.close();
+            serverSocket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finish();
     }
 
     private String stringToSend, exceptError = "";
@@ -160,7 +171,7 @@ public class Activity_ControllerConnection extends Activity {
             e.printStackTrace();
         }
     }
-    void buttonControlling()
+   private void buttonControlling()
     {
         up.setOnClickListener(new OnClickListener() {
             @Override

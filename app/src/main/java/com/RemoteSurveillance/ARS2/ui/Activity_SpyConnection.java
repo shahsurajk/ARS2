@@ -1,19 +1,8 @@
 package com.RemoteSurveillance.ARS2.ui;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.concurrent.TimeUnit;
-
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
-import android.graphics.Bitmap.Config;
-import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
@@ -31,6 +20,15 @@ import android.widget.TextView;
 import com.RemoteSurveillance.ARS2.R;
 import com.RemoteSurveillance.ARS2.util.Utils;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+import java.util.concurrent.TimeUnit;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.reactivex.BackpressureStrategy;
@@ -41,6 +39,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
+
+/**
+ * The server class
+ *
+ * */
 
 public class Activity_SpyConnection extends Activity implements SurfaceHolder.Callback {
 
@@ -57,8 +60,6 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
     private DataInputStream dataInputStream;
     private DataOutputStream dataOutputStream;
     private SurfaceHolder mHolder;
-    private Bitmap mBitmap;
-    private int[] pixels;
     private Size previewSize;
     private Camera mCamera;
     private Parameters params;
@@ -80,7 +81,7 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
         mHolder.addCallback(this);
 
         //display IP to connect to..
-        infoTV.setText("Hey! I'm waiting here; at IP:: "+Utils.getIpAddress("")+ "And Port:: " + PORT);
+        infoTV.setText("Hey! I'm waiting here; at IP:: " + Utils.getIpAddress("") + "And Port:: " + PORT);
 
         try {
             serverSoc = new ServerSocket(PORT);
@@ -94,12 +95,14 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
         Flowable f1 = Flowable.create(new FlowableOnSubscribe() {
             @Override
             public void subscribe(@NonNull FlowableEmitter e) throws Exception {
-                if (clientSoc== null)
+                if (clientSoc == null)
                     clientSoc = serverSoc.accept();
                 dataInputStream = new DataInputStream(clientSoc.getInputStream());
                 dataOutputStream = new DataOutputStream(clientSoc.getOutputStream());
-                while (clientSoc.isConnected()){
-                    e.onNext(dataInputStream.readUTF());
+                while (clientSoc.isConnected()) {
+                    String msg = dataInputStream.readUTF();
+                    e.onNext(msg);
+                    dataOutputStream.writeUTF(" ");
                 }
             }
         }, BackpressureStrategy.BUFFER).onErrorReturnItem("STOP");
@@ -109,39 +112,11 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
                 .subscribe(new Consumer() {
                     @Override
                     public void accept(Object o) throws Exception {
-                        Log.d(TAG, "accept: "+o);
+                        Log.d(TAG, "accept: " + o);
                         messageFromClient = (String) o;
 //                        playDTMFTones();
                     }
                 });
-        Flowable f2 = Flowable.create(new FlowableOnSubscribe() {
-            @Override
-            public void subscribe(@NonNull FlowableEmitter e) throws Exception {
-                mCamera.setPreviewCallback(new PreviewCallback() {
-                    @Override
-                    public void onPreviewFrame(byte[] data, Camera camera) {
-                        try {
-                            if (dataOutputStream!=null){
-                                dataOutputStream.writeInt(data.length);
-                                dataOutputStream.write(data);
-                            }
-                        } catch (IOException e1) {
-                            e1.printStackTrace();
-                        }
-                    }
-                });
-            }
-        }, BackpressureStrategy.BUFFER).doOnError(new Consumer<Throwable>() {
-            @Override
-            public void accept(Throwable throwable) throws Exception {
-                messageFromClient = "STOP";
-                playDTMFTones();
-            }
-        });
-        f2.subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .debounce(5000, TimeUnit.MILLISECONDS)
-                .subscribe();
     }
     private void playDTMFTones(){
         if (messageFromClient.equalsIgnoreCase("UP")) {
@@ -178,8 +153,27 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
         params = mCamera.getParameters();
         previewSize = params.getPreviewSize();
         mCamera.getParameters().setPreviewFormat(ImageFormat.RGB_565);
-        pixels = new int[previewSize.width * previewSize.height];
+        mCamera.setPreviewCallback(new PreviewCallback() {
+            @Override
+            public void onPreviewFrame(byte[] data, Camera camera) {
+                try {
+                    if (dataOutputStream != null) {
 
+                        ByteArrayOutputStream out= new ByteArrayOutputStream();
+                        Bitmap mBitmap = Bitmap.createBitmap(previewSize.width, previewSize.height, Bitmap.Config.ARGB_8888);
+                        mBitmap.compress(Bitmap.CompressFormat.JPEG	, 25, out);
+                        byte[]streamJPEG = out.toByteArray();
+                        dataOutputStream.writeInt(streamJPEG.length);
+                        dataOutputStream.write(streamJPEG);
+                        dataOutputStream.flush();
+                    }
+                } catch (SocketException e){
+                    e.printStackTrace();
+               }catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
         try {
             mCamera.setPreviewDisplay(holder);
             mCamera.startPreview();
@@ -198,40 +192,10 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         mCamera.stopPreview();
-        mCamera.release();
+//        mCamera.release();
     }
 
-    private byte[] streamMJPEG = new byte[0];
 
-    public void decodeYUV420(int[] rgb, byte[] yuv420, int width, int height) {
-        final int frameSize = width * height;
-
-        for (int j = 0, yp = 0; j < height; j++) {
-            int uvp = frameSize + (j >> 1) * width, u = 0, v = 0;
-            for (int i = 0; i < width; i++, yp++) {
-                int y = (0xff & ((int) yuv420[yp])) - 16;
-                if (y < 0) y = 0;
-                if ((i & 1) == 0) {
-                    v = (0xff & yuv420[uvp++]) - 128;
-                    u = (0xff & yuv420[uvp++]) - 128;
-                }
-
-                int y1192 = 1192 * y;
-                int r = (y1192 + 1634 * v);
-                int g = (y1192 - 833 * v - 400 * u);
-                int b = (y1192 + 2066 * u);
-
-                if (r < 0) r = 0;
-                else if (r > 262143) r = 262143;
-                if (g < 0) g = 0;
-                else if (g > 262143) g = 262143;
-                if (b < 0) b = 0;
-                else if (b > 262143) b = 262143;
-
-                rgb[yp] = 0xff000000 | ((r << 6) & 0xff0000) | ((g >> 2) & 0xff00) | ((b >> 10) & 0xff);
-            }
-        }
-    }
 /*
 
     @Override
