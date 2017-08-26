@@ -2,5 +2,9 @@
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/menu/main.xml"
     }
 ]

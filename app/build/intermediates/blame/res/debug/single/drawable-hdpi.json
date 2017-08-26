@@ -4,52 +4,72 @@
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/settings.png"
     },
     {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/camera.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/camera.png"
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/all2.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/all2.png"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/ars2_background.png",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/ars2_background.png"
     },
     {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowup.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowup.png"
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/informationideogram.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/informationideogram.png"
     },
     {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/all.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/all.png"
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/stop.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/stop.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/bkg.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/bkg.png"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowdown.png",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowdown.png"
     },
     {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/brochure3.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/brochure3.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/flash.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/flash.png"
+    },
+    {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/control.png",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/control.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/info.png",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/info.png"
     },
     {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/padlock.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/padlock.png"
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/speedometer.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/speedometer.png"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/flash.png",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/flash.png"
     },
     {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/brochure3.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/brochure3.png"
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/spy.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/spy.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowdown.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowdown.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/questionideogram.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/questionideogram.png"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/spy.png",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/spy.png"
-    },
-    {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/steer.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/steer.png"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/speedometer.png",
@@ -64,8 +84,76 @@
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowleft.png"
     },
     {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/padlock.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/padlock.png"
+    },
+    {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/questionideogram.png",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/questionideogram.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowright.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowright.png"
+    },
+    {
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/informationideogram.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/informationideogram.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowleft.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowleft.png"
+    },
+    {
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/camera.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/camera.png"
+    },
+    {
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowup.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowup.png"
+    },
+    {
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/all.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/all.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/steer.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/steer.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/settings.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/settings.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/camera.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/camera.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowup.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowup.png"
+    },
+    {
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/padlock.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/padlock.png"
+    },
+    {
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/brochure3.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/brochure3.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/info.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/info.png"
+    },
+    {
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/steer.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/steer.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/ars2_background.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/ars2_background.png"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/control.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/control.png"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/stop.png",
@@ -80,11 +168,11 @@
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/bkg.png"
     },
     {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowright.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowright.png"
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/all.png",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/drawable-hdpi/all.png"
     },
     {
-        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/informationideogram.png",
-        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/informationideogram.png"
+        "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/drawable-hdpi/arrowright.png",
+        "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/drawable-hdpi/arrowright.png"
     }
 ]

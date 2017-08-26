@@ -1,6 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
-.gitignore
 .gradle/3.3/tasks/
+app/build/
+.idea/
+.gradle/
+build/
 app/build/generated/assets/
 app/build/generated/res/
 app/build/generated/source/aidl/
@@ -73,3 +76,7 @@ build/generated/mockable-android-25.jar
 app/app-debug.apk
 build/android-profile/profile-2017-08-13-16-38-12-796.rawproto
 build/android-profile/profile-2017-08-13-16-38-30-085.rawproto
+app/build/generated/source/buildConfig/androidTest/
+app/build/intermediates/incremental/mergeDebugResources/merged.dir/
+build/android-profile/profile-2017-08-20-15-23-11-302.rawproto
+build/android-profile/profile-2017-08-20-15-23-46-343.rawproto

@@ -16,8 +16,24 @@
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/layout/info.xml"
     },
     {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/decide.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/layout/decide.xml"
+    },
+    {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/entry.xml",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/layout/entry.xml"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/help.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/layout/help.xml"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/info.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/layout/info.xml"
     },
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
@@ -26,5 +42,17 @@
     {
         "merged": "/home/madscientist/StudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/help.xml",
         "source": "/home/madscientist/StudioProjects/ARS2/app/src/main/res/layout/help.xml"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/activity_spy.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/layout/activity_spy.xml"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/entry.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/layout/entry.xml"
+    },
+    {
+        "merged": "/home/madscientist/AndroidStudioProjects/ARS2/app/build/intermediates/res/merged/debug/layout/login.xml",
+        "source": "/home/madscientist/AndroidStudioProjects/ARS2/app/src/main/res/layout/login.xml"
     }
 ]

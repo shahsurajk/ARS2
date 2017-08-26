@@ -1,24 +1,24 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-55:12
 	package
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:3:5-42
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:3:5-42
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:5:31-77
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:5:31-77
 	android:versionCode
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:7:5-9:68
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:7:5-9:68
 MERGED from [com.jakewharton:butterknife:8.7.0] /home/madscientist/.android/build-cache/39bb94baa34fbfeb645dd8536afce443bea8e15e/output/AndroidManifest.xml:5:5-43
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/madscientist/.android/build-cache/162831e9fc8f43e6e6fcb3b3463c8921a945a4dc/output/AndroidManifest.xml:19:5-43
 MERGED from [com.android.support:support-v4:25.3.0] /home/madscientist/.android/build-cache/4bb90cf388cc4450710b7d57d51a55da7a50b38d/output/AndroidManifest.xml:21:5-23:54
@@ -30,45 +30,45 @@ MERGED from [com.android.support:support-compat:25.3.0] /home/madscientist/.andr
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:25.3.0] /home/madscientist/.android/build-cache/4bb90cf388cc4450710b7d57d51a55da7a50b38d/output/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:9:9-38
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 	tools:ignore
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:9:39-66
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:9:39-66
 	android:minSdkVersion
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:8:9-35
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:10:5-75
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:10:5-75
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:10:22-73
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:10:22-73
 uses-permission#android.permission.BATTERY_STATS
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:5-71
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:5-71
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:22-69
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:22-69
 uses-permission#android.permission.CAMERA
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:5-64
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:5-64
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:22-62
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:22-62
 uses-permission#android.permission.FLASHLIGHT
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:5-68
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:5-68
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:22-66
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:22-66
 uses-permission#android.permission.INTERNET
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:5-66
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:5-66
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:22-64
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:5-78
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:5-78
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:22-76
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:22-76
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:5-70
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:5-70
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:22-68
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:22-68
 application
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:18:5-53:23
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:18:5-53:23
 MERGED from [com.android.support:support-v4:25.3.0] /home/madscientist/.android/build-cache/4bb90cf388cc4450710b7d57d51a55da7a50b38d/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.0] /home/madscientist/.android/build-cache/5dd00d547afa0cbffc3aff2baa858c89c55543ab/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.0] /home/madscientist/.android/build-cache/a7523c725823e5c0d163ebf4c2491552a43388d1/output/AndroidManifest.xml:29:5-20
@@ -76,81 +76,81 @@ MERGED from [com.android.support:support-core-ui:25.3.0] /home/madscientist/.and
 MERGED from [com.android.support:support-core-utils:25.3.0] /home/madscientist/.android/build-cache/beb23e425a5b93150f2f186c196fdeed5af9ea70/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.0] /home/madscientist/.android/build-cache/b63a5970804ae69010cd42734ab0d582f85e928c/output/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:22:9-41
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:22:9-41
 	android:allowBackup
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:20:9-35
 	android:icon
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:21:9-37
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:21:9-37
 	android:largeHeap
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:19:9-33
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:19:9-33
 	android:theme
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:23:9-40
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:23:9-40
 activity#com.RemoteSurveillance.ARS2.ui.Activity_SplashScreen
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:24:9-35:20
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:24:9-35:20
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:27:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:27:13-50
 	android:label
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:26:13-45
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:26:13-45
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:25:13-80
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:25:13-80
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:29:13-33:29
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:30:17-69
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:30:25-66
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:32:17-77
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:32:27-74
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:32:27-74
 activity#com.RemoteSurveillance.ARS2.MainActivity
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:36:9-37:53
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:36:9-37:53
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:37:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:37:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:36:19-47
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:36:19-47
 activity#com.RemoteSurveillance.ARS2.Spy
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:38:9-39:53
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:38:9-39:53
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:39:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:39:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:38:19-38
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:38:19-38
 activity#com.RemoteSurveillance.ARS2.Controller
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:40:9-41:53
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:40:9-41:53
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:41:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:41:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:40:19-45
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:40:19-45
 activity#com.RemoteSurveillance.ARS2.ui.Activity_ControllerConnection
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:9-43:62
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:9-43:62
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:43:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:43:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:19-67
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:19-67
 activity#com.RemoteSurveillance.ARS2.ui.Activity_SpyConnection
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:44:9-45:62
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:44:9-45:62
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:45:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:45:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:44:19-60
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:44:19-60
 activity#com.RemoteSurveillance.ARS2.ui.Activity_Login
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:46:9-47:62
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:46:9-47:62
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:47:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:47:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:46:19-52
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:46:19-52
 activity#com.RemoteSurveillance.ARS2.Info
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:48:9-49:62
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:48:9-49:62
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:49:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:49:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:48:19-39
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:48:19-39
 activity#com.RemoteSurveillance.ARS2.Help
-ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:50:9-51:62
+ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:50:9-51:62
 	android:screenOrientation
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:51:13-50
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:51:13-50
 	android:name
-		ADDED from /home/madscientist/StudioProjects/ARS2/app/src/main/AndroidManifest.xml:50:20-40
+		ADDED from /home/madscientist/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:50:20-40
 meta-data#android.support.VERSION
 ADDED from [com.android.support:support-v4:25.3.0] /home/madscientist/.android/build-cache/4bb90cf388cc4450710b7d57d51a55da7a50b38d/output/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-fragment:25.3.0] /home/madscientist/.android/build-cache/5dd00d547afa0cbffc3aff2baa858c89c55543ab/output/AndroidManifest.xml:25:5-27:34
