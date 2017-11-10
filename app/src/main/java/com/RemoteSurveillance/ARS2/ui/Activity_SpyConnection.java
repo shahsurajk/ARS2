@@ -1,18 +1,5 @@
 package com.RemoteSurveillance.ARS2.ui;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketException;
-import java.util.Enumeration;
-
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
@@ -34,27 +21,38 @@ import android.widget.TextView;
 
 import com.RemoteSurveillance.ARS2.R;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+import java.util.Enumeration;
+
 public class Activity_SpyConnection extends Activity implements SurfaceHolder.Callback , PreviewCallback {
 
+	private static final int PORT = 45678;
+	byte[] streamMJPEG;
 	private MediaPlayer mPlayer;
 	private ServerSocket serverSoc;
 	private Socket clientSoc;
-	private static final int PORT= 45678;
-	TextView info, msg;
-	String messageFromClient, status="WORKING";
-
-	DataInputStream dataInputStream;
-	DataOutputStream dataOutputStream;
-	SurfaceView mSurfView;
-	SurfaceHolder mHolder;
-	Bitmap mBitmap;
-	Handler mHandler;
-	int[] pixels;
-	Size previewSize;
-	Camera mCamera;
-	Parameters params;
-	String temp;
-	Boolean flagStatus;
+	private TextView info, msg;
+	private String messageFromClient, status = "WORKING";
+	private DataInputStream dataInputStream;
+	private DataOutputStream dataOutputStream;
+	private SurfaceView mSurfView;
+	private SurfaceHolder mHolder;
+	private Bitmap mBitmap;
+	private Handler mHandler;
+	private int[] pixels;
+	private Size previewSize;
+	private Camera mCamera;
+	private Parameters params;
+	private String temp;
+	private Boolean flagStatus;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -141,9 +139,10 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
 				}
 
 			}
-		}).start();;
+		}).start();
 
 	}
+
 	private String getIpAddress() {
 		String ip = "";
 		try {
@@ -174,6 +173,7 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
 
 		return ip;
 	}
+
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
@@ -188,7 +188,9 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
 			e.printStackTrace();
 		}
 		status=null;
-	}	@Override
+	}
+
+	@Override
 	public void surfaceCreated(SurfaceHolder holder) {
 		// TODO fix crash here, unable to open camera
 		mCamera =Camera.open();
@@ -226,7 +228,6 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
 		mCamera= null;
 
 	}
-	byte[] streamMJPEG;
 
 	@Override
 	public void onPreviewFrame(byte[] data, Camera camera) {

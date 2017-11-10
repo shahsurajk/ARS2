@@ -5,29 +5,29 @@
     android:background="@drawable/bkg" >
 
     <TextView
-        android:id="@+id/creditstxt"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:text="ARS2 Credits: "
+        android:layout_marginTop="34dp"
+        android:text="ARS2 Help"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/black"
+        android:textColor="#000000"
         android:textStyle="bold"
         android:typeface="monospace" />
-
-    <TextView
-        android:id="@+id/infotxt"
+<TextView
+        android:id="@+id/helpcontent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/creditstxt"
+        android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="29dp"
         android:gravity="center"
+    android:maxLines="14"
+        android:scrollbars="vertical"
         android:text="TextView"
-        android:textAlignment="center"
-        android:textColor="#000000"
+    android:textColor="#000000"
         android:typeface="monospace" />
-
+    
 </RelativeLayout>
