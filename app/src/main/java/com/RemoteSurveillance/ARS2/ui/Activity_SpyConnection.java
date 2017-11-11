@@ -1,15 +1,32 @@
 package com.RemoteSurveillance.ARS2.ui;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+import java.util.Enumeration;
+
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
-import android.graphics.ImageFormat;
+import android.graphics.Bitmap.CompressFormat;
+import android.graphics.Bitmap.Config;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.Size;
 import android.media.MediaPlayer;
+import android.net.rtp.RtpStream;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -18,48 +35,22 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.RemoteSurveillance.ARS2.R;
-import com.RemoteSurveillance.ARS2.util.Utils;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketException;
-import java.util.concurrent.TimeUnit;
+public class Activity_SpyConnection extends Activity implements SurfaceHolder.Callback, PreviewCallback {
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import io.reactivex.BackpressureStrategy;
-import io.reactivex.Flowable;
-import io.reactivex.FlowableEmitter;
-import io.reactivex.FlowableOnSubscribe;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
-
-/**
- * The server class
- *
- * */
-
-public class Activity_SpyConnection extends Activity implements SurfaceHolder.Callback {
-
-    private static final String TAG = Activity_SpyConnection.class.getCanonicalName().toString();
     private MediaPlayer mPlayer;
     private ServerSocket serverSoc;
     private Socket clientSoc;
     private static final int PORT = 45678;
-    @BindView(R.id.spytxt)TextView infoTV;
-    @BindView(R.id.msg)TextView msgTV;
-    @BindView(R.id.surface)SurfaceView surfaceView;
-    private String messageFromClient;
-
+    private TextView info, msg;
+    private String messageFromClient, status = "WORKING";
     private DataInputStream dataInputStream;
     private DataOutputStream dataOutputStream;
+    private SurfaceView mSurfView;
     private SurfaceHolder mHolder;
+    private Bitmap mBitmap;
+    private Handler mHandler;
+    private int[] pixels;
     private Size previewSize;
     private Camera mCamera;
     private Parameters params;
@@ -67,61 +58,72 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_spy);
-        ButterKnife.bind(this);
 
-        infoTV.setText("");
-        msgTV.setText("");
+        info = (TextView) findViewById(R.id.spytxt);
+        msg = (TextView) findViewById(R.id.msg);
+        info.setText("");
+        msg.setText("");
+        mSurfView = (SurfaceView) findViewById(R.id.surface);
 
-        mHolder = surfaceView.getHolder();
+        mHolder = mSurfView.getHolder();
         mHolder.addCallback(this);
+        info.setText("Hey! I'm waiting here; at IP:: " + getIpAddress() + "And Port:: " + PORT);
 
-        //display IP to connect to..
-        infoTV.setText("Hey! I'm waiting here; at IP:: " + Utils.getIpAddress("") + "And Port:: " + PORT);
+        new RecieveMessageAsyncTask().execute();
+        
+    }
 
-        try {
-            serverSoc = new ServerSocket(PORT);
+    private class RecieveMessageAsyncTask extends AsyncTask<Void, String, String> {
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        mCamera = Camera.open();
-
-        Flowable f1 = Flowable.create(new FlowableOnSubscribe() {
-            @Override
-            public void subscribe(@NonNull FlowableEmitter e) throws Exception {
-                if (clientSoc == null)
-                    clientSoc = serverSoc.accept();
-                dataInputStream = new DataInputStream(clientSoc.getInputStream());
-                dataOutputStream = new DataOutputStream(clientSoc.getOutputStream());
-                while (clientSoc.isConnected()) {
-                    String msg = dataInputStream.readUTF();
-                    e.onNext(msg);
-                    dataOutputStream.writeUTF(" ");
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            if (serverSoc == null) {
+                try {
+                    serverSoc = new ServerSocket(PORT);
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
-        }, BackpressureStrategy.BUFFER).onErrorReturnItem("STOP");
+        }
 
-        f1.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer() {
-                    @Override
-                    public void accept(Object o) throws Exception {
-                        Log.d(TAG, "accept: " + o);
-                        messageFromClient = (String) o;
-//                        playDTMFTones();
-                    }
-                });
+        @Override
+        protected void onProgressUpdate(String... values) {
+            super.onProgressUpdate(values);
+            msg.setText("The Messge Recieved is:: " + values[0]);
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            try {
+                clientSoc = serverSoc.accept();
+                dataOutputStream = new DataOutputStream(clientSoc.getOutputStream());
+                dataInputStream = new DataInputStream(clientSoc.getInputStream());
+                while (clientSoc.isConnected()) {
+                    messageFromClient = dataInputStream.readUTF();
+                    dataOutputStream.writeUTF("Message Sent to Client is:: " + messageFromClient);
+                    publishProgress(messageFromClient);
+                    dataOutputStream.writeInt(streamMJPEG.length);
+                    dataOutputStream.write(streamMJPEG);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
-    private void playDTMFTones(){
+
+    private void playDTMFTones() {
         if (messageFromClient.equalsIgnoreCase("UP")) {
             mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_9);
             mPlayer.start();
+
         } else if (messageFromClient.equalsIgnoreCase("DOWN")) {
             mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_6);
             mPlayer.start();
@@ -137,98 +139,127 @@ public class Activity_SpyConnection extends Activity implements SurfaceHolder.Ca
         } else if (messageFromClient.equalsIgnoreCase("STOP")) {
             mPlayer = MediaPlayer.create(Activity_SpyConnection.this, R.raw.dtmf_3);
             mPlayer.start();
+
         }
+    }
+
+    private String getIpAddress() {
+        String ip = "";
+        try {
+            Enumeration<NetworkInterface> enumNetworkInterfaces = NetworkInterface
+                    .getNetworkInterfaces();
+            while (enumNetworkInterfaces.hasMoreElements()) {
+                NetworkInterface networkInterface = enumNetworkInterfaces
+                        .nextElement();
+                Enumeration<InetAddress> enumInetAddress = networkInterface
+                        .getInetAddresses();
+                while (enumInetAddress.hasMoreElements()) {
+                    InetAddress inetAddress = enumInetAddress.nextElement();
+
+                    if (inetAddress.isSiteLocalAddress()) {
+                        ip += "SiteLocalAddress: "
+                                + inetAddress.getHostAddress() + "\n";
+                    }
+
+                }
+
+            }
+
+        } catch (SocketException e) {
+            e.printStackTrace();
+            ip += "Something Wrong! " + e.toString() + "\n";
+        }
+
+        return ip;
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        dataInputStream = null;
-        dataOutputStream = null;
-        mCamera.release();
+        try {
+            serverSoc.close();
+            serverSoc = null;
+            dataInputStream = null;
+            dataOutputStream = null;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        status = null;
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
+        // TODO fix crash here, unable to open camera
+        mCamera = Camera.open();
         params = mCamera.getParameters();
         previewSize = params.getPreviewSize();
-        mCamera.getParameters().setPreviewFormat(ImageFormat.RGB_565);
-        mCamera.setPreviewCallback(new PreviewCallback() {
-            @Override
-            public void onPreviewFrame(byte[] data, Camera camera) {
-                try {
-                    if (dataOutputStream != null) {
+        pixels = new int[previewSize.width * previewSize.height];
 
-                        ByteArrayOutputStream out= new ByteArrayOutputStream();
-                        Bitmap mBitmap = Bitmap.createBitmap(previewSize.width, previewSize.height, Bitmap.Config.ARGB_8888);
-                        mBitmap.compress(Bitmap.CompressFormat.JPEG	, 25, out);
-                        byte[]streamJPEG = out.toByteArray();
-                        dataOutputStream.writeInt(streamJPEG.length);
-                        dataOutputStream.write(streamJPEG);
-                        dataOutputStream.flush();
-                    }
-                } catch (SocketException e){
-                    e.printStackTrace();
-               }catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-            }
-        });
+
         try {
+            mCamera.setPreviewCallback(this);
             mCamera.setPreviewDisplay(holder);
             mCamera.startPreview();
         } catch (IOException e) {
             e.printStackTrace();
             mCamera.release();
+            mCamera = null;
+
         }
-        mCamera.startPreview();
+
     }
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width,
                                int height) {
+        mCamera.startPreview();
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         mCamera.stopPreview();
-//        mCamera.release();
+        mCamera = null;
+
     }
 
-
-/*
+    private byte[] streamMJPEG;
 
     @Override
-    public void onPreviewFrame(final byte[] data, Camera camera) {
-        ;
+    public void onPreviewFrame(byte[] data, Camera camera) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        decodeYUV420(pixels, data, previewSize.width, previewSize.height);
         mBitmap = Bitmap.createBitmap(pixels, previewSize.width, previewSize.height, Config.ARGB_8888);
         mBitmap.compress(CompressFormat.JPEG, 20, out);
+
         streamMJPEG = out.toByteArray();
-        new Thread(new Runnable() {
+      /*  new Thread(new Runnable() {
+
             @Override
             public void run() {
+
                 try {
-                    if (dataOutputStream!=null){
-                        dataOutputStream.writeInt(streamMJPEG.length);
-                        dataOutputStream.write(streamMJPEG);
-                    }
-                } catch (OutOfMemoryError e) {
+                  }catch(NullPointerException e)
+                {
+                    Log.d("Spy Conn", "Catch d error::" +e);
+                }catch (OutOfMemoryError e) {
                     e.printStackTrace();
-                } catch (IOException e) {
+                }
+                catch (IOException e) {
                     e.printStackTrace();
-                } catch (NegativeArraySizeException e) {
-                    Log.d("Spy Conn", "Negative Size?" + e);
-                } catch (ArrayStoreException e) {
+                }
+                catch (NegativeArraySizeException e){
+                    Log.d("Spy Conn","Negative Size?" +e);
+                }
+                catch(ArrayStoreException e)
+                {
                     e.printStackTrace();
-                } catch (ArrayIndexOutOfBoundsException e) {
+                }
+                catch(ArrayIndexOutOfBoundsException e)
+                {
                     e.printStackTrace();
                 }
             }
 
-        }).start();
+        }).start();*/
     }
-*/
 
 }

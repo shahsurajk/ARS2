@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.madscientist.ARS2"
-        minSdkVersion 11
-        targetSdkVersion 17
+        minSdkVersion 18
+        targetSdkVersion 21
     }
 
     buildTypes {

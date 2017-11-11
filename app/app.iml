@@ -22,7 +22,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
     <exclude-output />
@@ -103,21 +103,21 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="reactive-streams-1.0.0" level="project" />
-    <orderEntry type="library" exported="" name="engine.io-client-1.0.0" level="project" />
-    <orderEntry type="library" exported="" name="butterknife-annotations-8.7.0" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.13.0" level="project" />
-    <orderEntry type="library" exported="" name="socket.io-client-1.0.0" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-3.8.1" level="project" />
-    <orderEntry type="library" exported="" name="support-compat-25.3.0" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-25.3.0" level="project" />
-    <orderEntry type="library" exported="" name="rxandroid-2.0.1" level="project" />
-    <orderEntry type="library" exported="" name="support-media-compat-25.3.0" level="project" />
-    <orderEntry type="library" exported="" name="support-core-ui-25.3.0" level="project" />
-    <orderEntry type="library" exported="" name="butterknife-8.7.0" level="project" />
-    <orderEntry type="library" exported="" name="rxjava-2.1.2" level="project" />
-    <orderEntry type="library" exported="" name="support-core-utils-25.3.0" level="project" />
-    <orderEntry type="library" exported="" name="support-fragment-25.3.0" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-25.3.0" level="project" />
+    <orderEntry type="library" exported="" name="io.reactivex.rxjava2:rxjava:2.1.2@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.jakewharton:butterknife-8.7.0" level="project" />
+    <orderEntry type="library" exported="" name="io.reactivex.rxjava2:rxandroid-2.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-core-utils-25.3.0" level="project" />
+    <orderEntry type="library" exported="" name="io.socket:socket.io-client:1.0.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="io.socket:engine.io-client:1.0.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-compat-25.3.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-core-ui-25.3.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-annotations:25.3.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-media-compat-25.3.0" level="project" />
+    <orderEntry type="library" exported="" name="com.jakewharton:butterknife-annotations:8.7.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.squareup.okhttp3:okhttp:3.8.1@jar" level="project" />
+    <orderEntry type="library" exported="" name="org.reactivestreams:reactive-streams:1.0.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-v4-25.3.0" level="project" />
+    <orderEntry type="library" exported="" name="com.squareup.okio:okio:1.13.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-fragment-25.3.0" level="project" />
   </component>
 </module>
