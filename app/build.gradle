@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "com.madscientist.ARS2"
-        minSdkVersion 11
-        targetSdkVersion 17
+        minSdkVersion 14
+        targetSdkVersion 26
     }
 
     buildTypes {
@@ -25,11 +25,14 @@ android {
 
 dependencies {
     compile 'com.jakewharton:butterknife:8.7.0'
+    compile project(':libstreaming')
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
-    compile ('io.socket:socket.io-client:1.0.0') {
+    compile('io.socket:socket.io-client:1.0.0') {
         // excluding org.json which is provided by Android
         exclude group: 'org.json', module: 'json'
     }
-    compile 'com.android.support:appcompat-v7:25.3.0'
-    compile 'com.android.support:support-v4:25.3.0'
+    compile 'pub.devrel:easypermissions:1.0.1'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:design:26.+'
 }

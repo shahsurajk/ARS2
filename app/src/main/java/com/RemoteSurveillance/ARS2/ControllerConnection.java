@@ -1,44 +1,33 @@
 package com.RemoteSurveillance.ARS2;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.net.ResponseCache;
-import java.net.Socket;
-import java.net.UnknownHostException;
-
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.BitmapRegionDecoder;
-import android.hardware.Camera.Size;
 import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnPreparedListener;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.ParcelFileDescriptor;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
 
 //@SuppressWarnings("unused")
 @SuppressWarnings("unused")
 public class ControllerConnection extends Activity{
 
 
-	ImageButton up, down, left, right, stop, rot;
-	private  String SERVERIP;
 	private final int PORT= 45678;
+	ImageButton up, down, left, right, stop, rot;
 	String msg,str, msgToServer, warnMsg ;
 	TextView errs , read, warn;
 	Socket socket  ;
@@ -52,31 +41,32 @@ public class ControllerConnection extends Activity{
 	byte[] stream;
 	Handler mHandler= new Handler();
 	long maxAvailMemory;
+	String stringToSend, exceptError = "";
 
 //private Handler handler = new Handler();
+private String SERVERIP;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		setContentView(R.layout.activity_main);
-		up= (ImageButton) findViewById(R.id.up);
-		down= (ImageButton) findViewById(R.id.down);
-		left= (ImageButton) findViewById(R.id.left);
-		right= (ImageButton) findViewById(R.id.right);
-		rot= (ImageButton) findViewById(R.id.rot);
-		stop= (ImageButton) findViewById(R.id.stop);
-		errs= (TextView) findViewById(R.id.errors);
+		up = findViewById(R.id.up);
+		down = findViewById(R.id.down);
+		left = findViewById(R.id.left);
+		right = findViewById(R.id.right);
+		rot = findViewById(R.id.rot);
+		stop = findViewById(R.id.stop);
+		errs = findViewById(R.id.errors);
 		errs.setText("");
 
-		mView=(ImageView) findViewById(R.id.imgView);
-		read= (TextView) findViewById(R.id.read);
+		mView = findViewById(R.id.imgView);
+		read = findViewById(R.id.read);
 		read.setText("");
-		warn = (TextView) findViewById(R.id.warn);
+		warn = findViewById(R.id.warn);
 		warn.setText("Press Command Button to start... ");
 
 		Runtime rt= Runtime.getRuntime();
@@ -94,7 +84,7 @@ public class ControllerConnection extends Activity{
 		}).start();
 
 	}
-	String stringToSend, exceptError="";
+
 	void sendMessage(String str)
 	{
 		stringToSend =str;

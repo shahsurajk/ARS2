@@ -30,13 +30,13 @@ public class Activity_Dashboard extends AppCompatActivity {
 
         setContentView(R.layout.activity_dashboard);
 
-        spyButton = (ImageButton) findViewById(R.id.spybtn);
-        controlButton = (ImageButton) findViewById(R.id.cntrlbtn);
-        infoButton = (ImageButton) findViewById(R.id.infobtn);
-        helpButton =(ImageButton) findViewById(R.id.helpbtn);
+        spyButton = findViewById(R.id.spybtn);
+        controlButton = findViewById(R.id.cntrlbtn);
+        infoButton = findViewById(R.id.infobtn);
+        helpButton = findViewById(R.id.helpbtn);
 
         spyButton.setOnClickListener(arg0 -> {
-            Intent load = new Intent(getApplicationContext(), Activity_SpyConnection.class);
+            Intent load = new Intent(getApplicationContext(), Activity_RTSPServer_Spy.class);
             startActivity(load);
         });
 
