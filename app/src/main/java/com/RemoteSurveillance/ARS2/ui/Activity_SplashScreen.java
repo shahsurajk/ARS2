@@ -15,14 +15,14 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
 import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.RECORD_AUDIO;
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class Activity_SplashScreen extends AppCompatActivity {
 
     private static final int DELAY_IN_MILLIS = 2*1000;
     private static final int RC_APP_PERM = 1234;
-    private static final String[] APP_PERMISSIONS = {CAMERA, RECORD_AUDIO, WRITE_EXTERNAL_STORAGE};
+    private static final String[] APP_PERMISSIONS = {CAMERA, RECORD_AUDIO, READ_EXTERNAL_STORAGE};
     private static final String TAG = Activity_SplashScreen.class.getCanonicalName();
 
     @Override
@@ -57,6 +57,7 @@ public class Activity_SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             Intent loaded = new Intent(Activity_SplashScreen.this, Activity_Dashboard.class);
             startActivity(loaded);
+            finish();
         }, DELAY_IN_MILLIS);
     }
 }

@@ -98,3 +98,5 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+app/src/main/res/values-v11/
+app/src/main/res/values-v14/

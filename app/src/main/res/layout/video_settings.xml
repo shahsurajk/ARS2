@@ -2,7 +2,7 @@
     android:id="@+id/video_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="gone">
+    android:visibility="visible">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -36,7 +36,6 @@
                 style="@style/RadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="176x144, 30 fps, 250 Kbps" />
 
             <RadioButton
@@ -51,6 +50,7 @@
                 style="@style/RadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="352x288, 30 fps, 300 Kbps" />
 
             <RadioButton

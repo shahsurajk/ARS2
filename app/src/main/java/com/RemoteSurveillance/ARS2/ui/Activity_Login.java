@@ -11,11 +11,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.RemoteSurveillance.ARS2.ControllerConnection;
 import com.RemoteSurveillance.ARS2.R;
 
 public class Activity_Login extends AppCompatActivity {
 
+    public static final String KEY_SERVER_IP = "server_ip_address";
     private ImageButton connectBtn;
     private EditText ipEditText, passwordEditText;
 
@@ -29,19 +29,20 @@ public class Activity_Login extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
-        ipEditText = (EditText) findViewById(R.id.iptxt);
-        ipEditText.setText("192.168.0.1");
+        ipEditText = findViewById(R.id.iptxt);
+//        todo reset
+        ipEditText.setText("192.168.11.182");
 
-        passwordEditText = (EditText) findViewById(R.id.passtxt);
+        passwordEditText = findViewById(R.id.passtxt);
         passwordEditText.setText("123");
-        connectBtn = (ImageButton) findViewById(R.id.authbtn);
+        connectBtn = findViewById(R.id.authbtn);
         connectBtn.setOnClickListener(arg0 -> {
             String password, serverip = ipEditText.getText().toString();
             password = passwordEditText.getText().toString();
             if (password.equals("123")) {
-                Intent go = new Intent(Activity_Login.this, ControllerConnection.class);
-                go.putExtra("IP", serverip);
-                startActivity(go);
+                Intent clientIntent = new Intent(Activity_Login.this, Activity_RTSPClientConnection.class);
+                clientIntent.putExtra(KEY_SERVER_IP, serverip);
+                startActivity(clientIntent);
 
             } else {
                 Toast.makeText(Activity_Login.this, "Wrong Password! Try Again.", Toast.LENGTH_SHORT).show();

@@ -42,12 +42,6 @@
             android:name="com.RemoteSurveillance.ARS2.ui.Activity_Dashboard"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.RemoteSurveillance.ARS2.Spy"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name="com.RemoteSurveillance.ARS2.Controller"
-            android:screenOrientation="landscape" />
-        <activity
             android:name="com.RemoteSurveillance.ARS2.ControllerConnection"
             android:screenOrientation="landscape" />
         <activity
@@ -62,11 +56,15 @@
         <activity
             android:name="com.RemoteSurveillance.ARS2.ui.Activity_Help"
             android:screenOrientation="landscape" />
-        <activity android:name="com.RemoteSurveillance.ARS2.ui.Activity_RTSPServer_Spy" />
+        <activity
+            android:name="com.RemoteSurveillance.ARS2.ui.Activity_RTSPServer_Spy"
+            android:screenOrientation="landscape" />
 
         <service android:name="net.majorkernelpanic.streaming.rtsp.RtspServer" />
 
-        <activity android:name="com.RemoteSurveillance.ARS2.ui.Activity_RTSPClientConnection" />
+        <activity
+            android:name="com.RemoteSurveillance.ARS2.ui.Activity_RTSPClientConnection"
+            android:screenOrientation="landscape" />
         <activity
             android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
             android:exported="false"

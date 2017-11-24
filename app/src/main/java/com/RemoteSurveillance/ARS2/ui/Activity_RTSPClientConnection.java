@@ -2,9 +2,7 @@ package com.RemoteSurveillance.ARS2.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.hardware.Camera.CameraInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -14,8 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -32,6 +28,7 @@ import net.majorkernelpanic.streaming.SessionBuilder;
 import net.majorkernelpanic.streaming.audio.AudioQuality;
 import net.majorkernelpanic.streaming.gl.SurfaceView;
 import net.majorkernelpanic.streaming.rtsp.RtspClient;
+import net.majorkernelpanic.streaming.rtsp.RtspServer;
 import net.majorkernelpanic.streaming.video.VideoQuality;
 
 import java.util.regex.Matcher;
@@ -46,23 +43,18 @@ public class Activity_RTSPClientConnection extends Activity implements
 
     public final static String TAG = "RTSPClient";
 
-    private Button mButtonSave;
-    private Button mButtonVideo;
     private ImageButton mButtonStart;
     private ImageButton mButtonFlash;
     private ImageButton mButtonCamera;
     private ImageButton mButtonSettings;
     private RadioGroup mRadioGroup;
     private FrameLayout mLayoutVideoSettings;
-    private FrameLayout mLayoutServerSettings;
     private SurfaceView mSurfaceView;
     private TextView mTextBitrate;
-    private EditText mEditTextURI;
-    private EditText mEditTextPassword;
-    private EditText mEditTextUsername;
     private ProgressBar mProgressBar;
     private Session mSession;
     private RtspClient mClient;
+    private String serverIP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,19 +63,13 @@ public class Activity_RTSPClientConnection extends Activity implements
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_rtspclient_connection);
 
-        mButtonVideo = findViewById(R.id.video);
-        mButtonSave = findViewById(R.id.save);
         mButtonStart = findViewById(R.id.start);
         mButtonFlash = findViewById(R.id.flash);
         mButtonCamera = findViewById(R.id.camera);
         mButtonSettings = findViewById(R.id.settings);
         mSurfaceView = findViewById(R.id.surface);
-        mEditTextURI = findViewById(R.id.uri);
-        mEditTextUsername = findViewById(R.id.username);
-        mEditTextPassword = findViewById(R.id.password);
         mTextBitrate = findViewById(R.id.bitrate);
         mLayoutVideoSettings = findViewById(R.id.video_layout);
-        mLayoutServerSettings = findViewById(R.id.server_layout);
         mRadioGroup = findViewById(R.id.radio);
         mProgressBar = findViewById(R.id.progress_bar);
 
@@ -91,18 +77,12 @@ public class Activity_RTSPClientConnection extends Activity implements
         mRadioGroup.setOnClickListener(this);
 
         mButtonStart.setOnClickListener(this);
-        mButtonSave.setOnClickListener(this);
         mButtonFlash.setOnClickListener(this);
         mButtonCamera.setOnClickListener(this);
-        mButtonVideo.setOnClickListener(this);
         mButtonSettings.setOnClickListener(this);
         mButtonFlash.setTag("off");
 
-        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_RTSPClientConnection.this);
-        if (mPrefs.getString("uri", null) != null) mLayoutServerSettings.setVisibility(View.GONE);
-        mEditTextURI.setText(mPrefs.getString("uri", getString(R.string.default_stream)));
-        mEditTextPassword.setText(mPrefs.getString("password", ""));
-        mEditTextUsername.setText(mPrefs.getString("username", ""));
+        serverIP = getIntent().getStringExtra(Activity_Login.KEY_SERVER_IP);
 
         // Configures the SessionBuilder
         mSession = SessionBuilder.getInstance()
@@ -111,6 +91,7 @@ public class Activity_RTSPClientConnection extends Activity implements
                 .setAudioQuality(new AudioQuality(8000, 16000))
                 .setVideoEncoder(SessionBuilder.VIDEO_H264)
                 .setSurfaceView(mSurfaceView)
+//                .setDestination(serverIP)
                 .setPreviewOrientation(0)
                 .setCallback(this)
                 .build();
@@ -128,18 +109,18 @@ public class Activity_RTSPClientConnection extends Activity implements
 
         // Use this if you want the aspect ratio of the surface view to
         // respect the aspect ratio of the camera preview
-        //mSurfaceView.setAspectRatioMode(SurfaceView.ASPECT_RATIO_PREVIEW);
+        mSurfaceView.setAspectRatioMode(SurfaceView.ASPECT_RATIO_PREVIEW);
 
         mSurfaceView.getHolder().addCallback(this);
 
         selectQuality();
+        toggleStream();
 
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         mLayoutVideoSettings.setVisibility(View.GONE);
-        mLayoutServerSettings.setVisibility(View.VISIBLE);
         selectQuality();
     }
 
@@ -147,7 +128,6 @@ public class Activity_RTSPClientConnection extends Activity implements
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.start:
-                mLayoutServerSettings.setVisibility(View.GONE);
                 toggleStream();
                 break;
             case R.id.flash:
@@ -164,21 +144,15 @@ public class Activity_RTSPClientConnection extends Activity implements
                 mSession.switchCamera();
                 break;
             case R.id.settings:
-                if (mLayoutVideoSettings.getVisibility() == View.GONE &&
-                        mLayoutServerSettings.getVisibility() == View.GONE) {
-                    mLayoutServerSettings.setVisibility(View.VISIBLE);
-                } else {
-                    mLayoutServerSettings.setVisibility(View.GONE);
+                if (mLayoutVideoSettings.getVisibility() != View.GONE) {
                     mLayoutVideoSettings.setVisibility(View.GONE);
+                } else {
+                    mLayoutVideoSettings.setVisibility(View.VISIBLE);
                 }
                 break;
             case R.id.video:
                 mRadioGroup.clearCheck();
-                mLayoutServerSettings.setVisibility(View.GONE);
                 mLayoutVideoSettings.setVisibility(View.VISIBLE);
-                break;
-            case R.id.save:
-                mLayoutServerSettings.setVisibility(View.GONE);
                 break;
         }
     }
@@ -221,27 +195,10 @@ public class Activity_RTSPClientConnection extends Activity implements
     public void toggleStream() {
         mProgressBar.setVisibility(View.VISIBLE);
         if (!mClient.isStreaming()) {
-            String ip, port, path;
 
-            // We save the content user inputs in Shared Preferences
             SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(Activity_RTSPClientConnection.this);
-            Editor editor = mPrefs.edit();
-            editor.putString("uri", mEditTextURI.getText().toString());
-            editor.putString("password", mEditTextPassword.getText().toString());
-            editor.putString("username", mEditTextUsername.getText().toString());
-            editor.commit();
 
-            // We parse the URI written in the Editext
-            Pattern uri = Pattern.compile("rtsp://(.+):(\\d*)/(.+)");
-            Matcher m = uri.matcher(mEditTextURI.getText());
-            m.find();
-            ip = m.group(1);
-            port = m.group(2);
-            path = m.group(3);
-
-            mClient.setCredentials(mEditTextUsername.getText().toString(), mEditTextPassword.getText().toString());
-            mClient.setServerAddress(ip, Integer.parseInt(port));
-            mClient.setStreamPath("/" + path);
+            mClient.setServerAddress(serverIP, Integer.parseInt(mPrefs.getString(RtspServer.KEY_PORT, "1234")));
             mClient.startStream();
 
         } else {
@@ -254,10 +211,9 @@ public class Activity_RTSPClientConnection extends Activity implements
         final String error = (msg == null) ? "Error unknown" : msg;
         // Displays a popup to report the eror to the user
         AlertDialog.Builder builder = new AlertDialog.Builder(Activity_RTSPClientConnection.this);
-        builder.setMessage(msg).setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-            }
+        builder.setMessage(msg).setPositiveButton("OK", (dialog, id) -> {
         });
+//        todo fix crash here
         AlertDialog dialog = builder.create();
         dialog.show();
     }
@@ -332,6 +288,7 @@ public class Activity_RTSPClientConnection extends Activity implements
     public void onRtspUpdate(int message, Exception e) {
         switch (message) {
             case RtspClient.ERROR_CONNECTION_FAILED:
+                Log.d(TAG, "onRtspUpdate: connection failed");
             case RtspClient.ERROR_WRONG_CREDENTIALS:
                 mProgressBar.setVisibility(View.GONE);
                 enableUI();

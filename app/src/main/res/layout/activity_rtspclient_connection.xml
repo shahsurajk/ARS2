@@ -73,8 +73,6 @@
 
     <include layout="@layout/video_settings" />
 
-    <include layout="@layout/server_settings" />
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

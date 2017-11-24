@@ -37,12 +37,6 @@
             android:name=".ui.Activity_Dashboard"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Spy"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".Controller"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".ControllerConnection"
             android:screenOrientation="landscape" />
         <activity
@@ -57,11 +51,15 @@
         <activity
             android:name=".ui.Activity_Help"
             android:screenOrientation="landscape" />
-        <activity android:name=".ui.Activity_RTSPServer_Spy" />
+        <activity
+            android:name=".ui.Activity_RTSPServer_Spy"
+            android:screenOrientation="landscape" />
 
         <service android:name="net.majorkernelpanic.streaming.rtsp.RtspServer" />
 
-        <activity android:name=".ui.Activity_RTSPClientConnection"></activity>
+        <activity
+            android:name=".ui.Activity_RTSPClientConnection"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

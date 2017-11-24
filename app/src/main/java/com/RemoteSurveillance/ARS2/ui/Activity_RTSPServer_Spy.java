@@ -6,10 +6,13 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.RemoteSurveillance.ARS2.R;
+import com.RemoteSurveillance.ARS2.Utils;
 
 import net.majorkernelpanic.streaming.SessionBuilder;
 import net.majorkernelpanic.streaming.gl.SurfaceView;
@@ -20,9 +23,13 @@ import butterknife.ButterKnife;
 
 public class Activity_RTSPServer_Spy extends AppCompatActivity {
 
-
+    private static final String TAG = Activity_RTSPServer_Spy.class.getCanonicalName();
     @BindView(R.id.surface)
     SurfaceView surfaceView;
+    @BindView(R.id.msgTxt)
+    TextView msgTxt;
+    @BindView(R.id.spytxt)
+    TextView spytxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +47,12 @@ public class Activity_RTSPServer_Spy extends AppCompatActivity {
         editor.putString(RtspServer.KEY_PORT, String.valueOf(1234));
         editor.commit();
 
+        spytxt.setText("Listening for client on: " + Utils.getInetIPAddress());
+        msgTxt.setVisibility(View.GONE);
+
         SessionBuilder.getInstance()
                 .setSurfaceView(surfaceView)
-                .setPreviewOrientation(180)
+                .setPreviewOrientation(90)
                 .setContext(getApplicationContext())
                 .setAudioEncoder(SessionBuilder.AUDIO_NONE)
                 .setVideoEncoder(SessionBuilder.VIDEO_H264);

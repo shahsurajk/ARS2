@@ -1,246 +1,236 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-68:12
-MERGED from [com.jakewharton:butterknife:8.7.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/butterknife-8.7.0.aar/e86a13a411d36251f407faf7864940be/AndroidManifest.xml:2:1-7:12
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-64:12
+MERGED from [com.jakewharton:butterknife:8.7.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/butterknife-8.7.0.aar/fc923065df75baa382f1240eefd6953d/AndroidManifest.xml:2:1-7:12
 MERGED from [:libstreaming] /home/suraj/AndroidStudioProjects/ARS2/libstreaming/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:2:1-19:12
-MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/07de3af9ff0d7b87b8a6ca1ed19f24d0/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/6f0331f492497116f3d4082f31dba8f4/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/650f26b5ec0195452c57abd26949b057/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/e4d40823fb1482c8ea48ddfc02434416/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/599f59bd0c2faea7d478c365488542bd/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1468950069522eea30b3914cb42e762a/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b6b42478f43937cdbc91e048109ae9b8/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7fa632dabf16bace3d18deb61c2e28ea/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/37a6a8a3da8f5d2a7114523804d64905/AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/ceee9b77bedf0c2addb7c427a987e02d/AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ca0d10d02cdc015cb81373ac47dddee2/AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:17:1-30:12
-INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-68:12
-INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-68:12
+MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:2:1-19:12
+MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/050948da3da31024aa7b4746bc8c956a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b5cc961aa9d066b8abb94c4a0faead6b/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c3bb9d9a5b75ff92378501c99dc44012/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/20ddc13ac40819a5c2858065dcd3b6fe/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/296789f70490b84cd928c7a0fac6c995/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f08485d54bb69b946ee038b95aa62bdc/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/492fc37ac0364659c72c222d80de86a4/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/bbc05c3cb9555c01a0d91f5e519ce114/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ea4c52dfc8f7c2e766ef2273ab18d697/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/24cbc037418d90422f532f73fef14987/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dbebe906ae842e16009b408bfb0e6991/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:1-64:12
 	package
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:4:5-42
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:3:5-42
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:6:5-30
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:5:5-30
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
-	xmlns:tools
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:3:5-51
 	xmlns:android
 		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:5:5-28
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:4:5-28
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 uses-feature#android.hardware.camera
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:8:5-60
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:7:5-60
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:8:19-57
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:7:19-57
 uses-feature#android.hardware.camera.autofocus
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:9:5-70
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:8:5-70
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:9:19-67
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:8:19-67
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:5-76
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:10:5-76
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:22-73
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:10:22-73
 uses-permission#android.permission.BATTERY_STATS
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:5-72
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:5-72
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:22-69
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:11:22-69
 uses-permission#android.permission.CAMERA
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:5-65
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:5-65
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:22-62
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:12:22-62
 uses-permission#android.permission.FLASHLIGHT
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:5-69
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:5-69
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:22-66
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:13:22-66
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:5-81
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:5-81
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:22-78
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:14:22-78
 uses-permission#android.permission.INTERNET
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:5-67
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:5-67
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:22-64
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:15:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:17:5-79
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:5-79
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:17:22-76
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:16:22-76
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:18:5-71
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:17:5-71
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:18:22-68
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:17:22-68
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:19:5-68
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:18:5-68
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:19:22-65
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:18:22-65
 application
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:21:5-66:19
-MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:11:5-17:19
-MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:11:5-17:19
-MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/07de3af9ff0d7b87b8a6ca1ed19f24d0/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/07de3af9ff0d7b87b8a6ca1ed19f24d0/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/6f0331f492497116f3d4082f31dba8f4/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/6f0331f492497116f3d4082f31dba8f4/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/650f26b5ec0195452c57abd26949b057/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/650f26b5ec0195452c57abd26949b057/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/e4d40823fb1482c8ea48ddfc02434416/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/e4d40823fb1482c8ea48ddfc02434416/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/599f59bd0c2faea7d478c365488542bd/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/599f59bd0c2faea7d478c365488542bd/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1468950069522eea30b3914cb42e762a/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1468950069522eea30b3914cb42e762a/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b6b42478f43937cdbc91e048109ae9b8/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b6b42478f43937cdbc91e048109ae9b8/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7fa632dabf16bace3d18deb61c2e28ea/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7fa632dabf16bace3d18deb61c2e28ea/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/37a6a8a3da8f5d2a7114523804d64905/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/37a6a8a3da8f5d2a7114523804d64905/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/ceee9b77bedf0c2addb7c427a987e02d/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/ceee9b77bedf0c2addb7c427a987e02d/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ca0d10d02cdc015cb81373ac47dddee2/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ca0d10d02cdc015cb81373ac47dddee2/AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:24:5-28:19
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:20:5-62:19
+MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:11:5-17:19
+MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:11:5-17:19
+MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/050948da3da31024aa7b4746bc8c956a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/050948da3da31024aa7b4746bc8c956a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b5cc961aa9d066b8abb94c4a0faead6b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b5cc961aa9d066b8abb94c4a0faead6b/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c3bb9d9a5b75ff92378501c99dc44012/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c3bb9d9a5b75ff92378501c99dc44012/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/20ddc13ac40819a5c2858065dcd3b6fe/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/20ddc13ac40819a5c2858065dcd3b6fe/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/296789f70490b84cd928c7a0fac6c995/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/296789f70490b84cd928c7a0fac6c995/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f08485d54bb69b946ee038b95aa62bdc/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f08485d54bb69b946ee038b95aa62bdc/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/492fc37ac0364659c72c222d80de86a4/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/492fc37ac0364659c72c222d80de86a4/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/bbc05c3cb9555c01a0d91f5e519ce114/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/bbc05c3cb9555c01a0d91f5e519ce114/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ea4c52dfc8f7c2e766ef2273ab18d697/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ea4c52dfc8f7c2e766ef2273ab18d697/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/24cbc037418d90422f532f73fef14987/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/24cbc037418d90422f532f73fef14987/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dbebe906ae842e16009b408bfb0e6991/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dbebe906ae842e16009b408bfb0e6991/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:24:5-28:19
 	android:label
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:24:9-41
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:23:9-41
 	android:largeHeap
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:25:9-33
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:24:9-33
 	android:icon
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:23:9-37
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:22:9-37
 	android:allowBackup
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:21:9-35
 	android:theme
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:26:9-40
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:25:9-40
 activity#com.RemoteSurveillance.ARS2.ui.Activity_SplashScreen
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:27:9-36:20
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:26:9-35:20
 	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:30:13-50
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:29:13-50
 	android:label
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:29:13-45
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:28:13-45
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:28:13-53
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:27:13-53
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:31:13-35:29
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:32:17-69
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:32:25-66
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:34:17-77
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:34:27-74
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:33:27-74
 activity#com.RemoteSurveillance.ARS2.ui.Activity_Dashboard
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:37:9-39:53
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:36:9-38:53
 	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:39:13-50
-	android:name
 		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:38:13-50
-activity#com.RemoteSurveillance.ARS2.Spy
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:40:9-42:53
-	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:41:13-32
-activity#com.RemoteSurveillance.ARS2.Controller
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:43:9-45:53
-	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:45:13-50
-	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:44:13-39
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:37:13-50
 activity#com.RemoteSurveillance.ARS2.ControllerConnection
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:46:9-48:53
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:39:9-41:53
 	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:48:13-50
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:41:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:47:13-49
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:40:13-49
 activity#com.RemoteSurveillance.ARS2.ui.Activity_SpyConnection
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:49:9-51:53
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:42:9-44:53
 	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:51:13-50
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:44:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:50:13-54
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:43:13-54
 activity#com.RemoteSurveillance.ARS2.ui.Activity_Login
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:52:9-54:53
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:45:9-47:53
 	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:54:13-50
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:47:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:53:13-46
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:46:13-46
 activity#com.RemoteSurveillance.ARS2.ui.Activity_Info
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:55:9-57:53
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:48:9-50:53
 	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:57:13-50
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:50:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:56:13-45
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:49:13-45
 activity#com.RemoteSurveillance.ARS2.ui.Activity_Help
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:58:9-60:53
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:51:9-53:53
 	android:screenOrientation
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:60:13-50
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:53:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:59:13-45
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:52:13-45
 activity#com.RemoteSurveillance.ARS2.ui.Activity_RTSPServer_Spy
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:61:9-64
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:54:9-56:15
+	android:screenOrientation
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:55:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:61:19-61
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:54:19-61
 service#net.majorkernelpanic.streaming.rtsp.RtspServer
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:63:9-82
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:58:9-82
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:63:18-79
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:58:18-79
 activity#com.RemoteSurveillance.ARS2.ui.Activity_RTSPClientConnection
-ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:65:9-79
+ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:60:9-61:62
+	android:screenOrientation
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:61:13-50
 	android:name
-		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:65:19-67
+		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml:60:19-67
 uses-sdk
 INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
-MERGED from [com.jakewharton:butterknife:8.7.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/butterknife-8.7.0.aar/e86a13a411d36251f407faf7864940be/AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.7.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/butterknife-8.7.0.aar/e86a13a411d36251f407faf7864940be/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.7.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/butterknife-8.7.0.aar/fc923065df75baa382f1240eefd6953d/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.7.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/butterknife-8.7.0.aar/fc923065df75baa382f1240eefd6953d/AndroidManifest.xml:5:5-43
 MERGED from [:libstreaming] /home/suraj/AndroidStudioProjects/ARS2/libstreaming/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:libstreaming] /home/suraj/AndroidStudioProjects/ARS2/libstreaming/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:7:5-9:41
-MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/07de3af9ff0d7b87b8a6ca1ed19f24d0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/07de3af9ff0d7b87b8a6ca1ed19f24d0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/6f0331f492497116f3d4082f31dba8f4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/6f0331f492497116f3d4082f31dba8f4/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/650f26b5ec0195452c57abd26949b057/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/650f26b5ec0195452c57abd26949b057/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/e4d40823fb1482c8ea48ddfc02434416/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/e4d40823fb1482c8ea48ddfc02434416/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/599f59bd0c2faea7d478c365488542bd/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/599f59bd0c2faea7d478c365488542bd/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1468950069522eea30b3914cb42e762a/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1468950069522eea30b3914cb42e762a/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b6b42478f43937cdbc91e048109ae9b8/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b6b42478f43937cdbc91e048109ae9b8/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7fa632dabf16bace3d18deb61c2e28ea/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7fa632dabf16bace3d18deb61c2e28ea/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/37a6a8a3da8f5d2a7114523804d64905/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/37a6a8a3da8f5d2a7114523804d64905/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/ceee9b77bedf0c2addb7c427a987e02d/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/ceee9b77bedf0c2addb7c427a987e02d/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ca0d10d02cdc015cb81373ac47dddee2/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ca0d10d02cdc015cb81373ac47dddee2/AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:20:5-22:41
+MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/050948da3da31024aa7b4746bc8c956a/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/050948da3da31024aa7b4746bc8c956a/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b5cc961aa9d066b8abb94c4a0faead6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b5cc961aa9d066b8abb94c4a0faead6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c3bb9d9a5b75ff92378501c99dc44012/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c3bb9d9a5b75ff92378501c99dc44012/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/20ddc13ac40819a5c2858065dcd3b6fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/20ddc13ac40819a5c2858065dcd3b6fe/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/296789f70490b84cd928c7a0fac6c995/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/296789f70490b84cd928c7a0fac6c995/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f08485d54bb69b946ee038b95aa62bdc/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f08485d54bb69b946ee038b95aa62bdc/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/492fc37ac0364659c72c222d80de86a4/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/492fc37ac0364659c72c222d80de86a4/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/bbc05c3cb9555c01a0d91f5e519ce114/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/bbc05c3cb9555c01a0d91f5e519ce114/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ea4c52dfc8f7c2e766ef2273ab18d697/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ea4c52dfc8f7c2e766ef2273ab18d697/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/24cbc037418d90422f532f73fef14987/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/24cbc037418d90422f532f73fef14987/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dbebe906ae842e16009b408bfb0e6991/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dbebe906ae842e16009b408bfb0e6991/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:20:5-22:41
 INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
@@ -250,46 +240,46 @@ INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifes
 		ADDED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 		INJECTED from /home/suraj/AndroidStudioProjects/ARS2/app/src/main/AndroidManifest.xml
 activity#pub.devrel.easypermissions.AppSettingsDialogHolderActivity
-ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:12:9-16:66
+ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:12:9-16:66
 	android:label
-		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:15:13-29
+		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:15:13-29
 	android:exported
-		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:14:13-37
+		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:14:13-37
 	android:theme
-		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:16:13-63
+		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:16:13-63
 	android:name
-		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/bc2dec20d0c49238a0648d0407b29193/AndroidManifest.xml:13:13-86
+		ADDED from [pub.devrel:easypermissions:1.0.1] /home/suraj/.gradle/caches/transforms-1/files-1.1/easypermissions-1.0.1.aar/3837013b12b4389f12a0699be30ecb0e/AndroidManifest.xml:13:13-86
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/07de3af9ff0d7b87b8a6ca1ed19f24d0/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/07de3af9ff0d7b87b8a6ca1ed19f24d0/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/6f0331f492497116f3d4082f31dba8f4/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/6f0331f492497116f3d4082f31dba8f4/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/650f26b5ec0195452c57abd26949b057/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/650f26b5ec0195452c57abd26949b057/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/e4d40823fb1482c8ea48ddfc02434416/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/e4d40823fb1482c8ea48ddfc02434416/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/599f59bd0c2faea7d478c365488542bd/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/599f59bd0c2faea7d478c365488542bd/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1468950069522eea30b3914cb42e762a/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1468950069522eea30b3914cb42e762a/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b6b42478f43937cdbc91e048109ae9b8/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/b6b42478f43937cdbc91e048109ae9b8/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7fa632dabf16bace3d18deb61c2e28ea/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7fa632dabf16bace3d18deb61c2e28ea/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/37a6a8a3da8f5d2a7114523804d64905/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/37a6a8a3da8f5d2a7114523804d64905/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/ceee9b77bedf0c2addb7c427a987e02d/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/ceee9b77bedf0c2addb7c427a987e02d/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ca0d10d02cdc015cb81373ac47dddee2/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/ca0d10d02cdc015cb81373ac47dddee2/AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/050948da3da31024aa7b4746bc8c956a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/050948da3da31024aa7b4746bc8c956a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b5cc961aa9d066b8abb94c4a0faead6b/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/b5cc961aa9d066b8abb94c4a0faead6b/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c3bb9d9a5b75ff92378501c99dc44012/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/c3bb9d9a5b75ff92378501c99dc44012/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/20ddc13ac40819a5c2858065dcd3b6fe/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/20ddc13ac40819a5c2858065dcd3b6fe/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/296789f70490b84cd928c7a0fac6c995/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/296789f70490b84cd928c7a0fac6c995/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f08485d54bb69b946ee038b95aa62bdc/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/f08485d54bb69b946ee038b95aa62bdc/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/492fc37ac0364659c72c222d80de86a4/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/492fc37ac0364659c72c222d80de86a4/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/bbc05c3cb9555c01a0d91f5e519ce114/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/bbc05c3cb9555c01a0d91f5e519ce114/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ea4c52dfc8f7c2e766ef2273ab18d697/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/ea4c52dfc8f7c2e766ef2273ab18d697/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/24cbc037418d90422f532f73fef14987/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/24cbc037418d90422f532f73fef14987/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dbebe906ae842e16009b408bfb0e6991/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/dbebe906ae842e16009b408bfb0e6991/AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/65bf7675a1cd0b90353833b4adaa321b/AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:design:26.1.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/8beefb78d87ea4b722e86f8b386ea0f8/AndroidManifest.xml:27:13-51
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/910a803bf020b50a084230ee6f2d1cfb/AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/suraj/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/a04fe88cd2994a4c714321e555285e19/AndroidManifest.xml:26:13-58
